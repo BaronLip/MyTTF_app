@@ -30,7 +30,9 @@
     
 ### Tasks:
 - [ ] Create a user story.
-- [ ] Determine classes, attributes and associations.
+- [x] Determine classes, attributes and associations.
+- [x] Test associations.
 - [ ] Create sessions, signup and Login function.
 - [ ] Use can search other users by ranking.
+- [ ] Write instance method to tally up wins/losses for Player.
 

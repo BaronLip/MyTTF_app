@@ -1,4 +1,5 @@
 class Game < ApplicationRecord
     belongs_to :match
-    has_many :players, through: :matches
+    belongs_to :player
+    # has_many :players, through: :match
 end

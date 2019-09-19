@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_09_19_224405) do
   create_table "matches", force: :cascade do |t|
     t.integer "player_id"
     t.integer "opponent_id"
-    t.string "type"
+    t.string "match_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
