@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+# Player.destroy_all
+# Opponent.destroy_all
+# Match.destroy_all
+# Game.destroy_all
+
+
+20.times {
+    Opponent.create(username: Faker::Name.name, ranking: Faker::Number.between(from: 1000, to: 2400))
+}

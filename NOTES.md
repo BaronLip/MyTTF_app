@@ -7,7 +7,7 @@
         3. number of wins.
         4. number of losses.
         5. ranking.
-    - Player can search for other Players based on ranking.
+    - Player can search for Opponents based on ranking.
 
     
         
@@ -29,10 +29,13 @@
 
     
 ### Tasks:
-- [ ] Create a user story.
+- [x] Create a user story.
 - [x] Determine classes, attributes and associations.
 - [x] Test associations.
+- [ ] Start creating routes.
 - [ ] Create sessions, signup and Login function.
+- [ ] Setup Validations.
 - [ ] Use can search other users by ranking.
 - [ ] Write instance method to tally up wins/losses for Player.
+- [ ] Based on player and opponent rankings, winner and loser rankings are adjusted.
 

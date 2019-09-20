@@ -1,0 +1,2 @@
+class OpponentsController < ApplicationController
+end

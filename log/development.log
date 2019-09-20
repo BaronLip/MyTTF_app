@@ -205,3 +205,153 @@ Migrating to CreateGames (20190919224405)
   [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = ? LIMIT ?[0m  [["player_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateOpponents (20190920032124)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190920032124_create_opponents.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "opponents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "ranking" integer, "wins" varchar, "losses" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190920032124_create_opponents.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190920032124"]]
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.5ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Cora Koch MD"], ["ranking", 1277], ["created_at", "2019-09-20 03:33:45.508159"], ["updated_at", "2019-09-20 03:33:45.508159"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.3ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Velia Crist"], ["ranking", 2114], ["created_at", "2019-09-20 03:33:45.511306"], ["updated_at", "2019-09-20 03:33:45.511306"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.2ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Mrs. Henrietta Carter"], ["ranking", 1848], ["created_at", "2019-09-20 03:33:45.513469"], ["updated_at", "2019-09-20 03:33:45.513469"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.2ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Rina Prohaska"], ["ranking", 1568], ["created_at", "2019-09-20 03:33:45.515682"], ["updated_at", "2019-09-20 03:33:45.515682"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.2ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Renda Parisian"], ["ranking", 2034], ["created_at", "2019-09-20 03:33:45.517968"], ["updated_at", "2019-09-20 03:33:45.517968"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.3ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Elma Christiansen"], ["ranking", 1297], ["created_at", "2019-09-20 03:33:45.520351"], ["updated_at", "2019-09-20 03:33:45.520351"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.3ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Sol Harris MD"], ["ranking", 1673], ["created_at", "2019-09-20 03:33:45.522852"], ["updated_at", "2019-09-20 03:33:45.522852"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.4ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Mr. Rufus Mohr"], ["ranking", 1395], ["created_at", "2019-09-20 03:33:45.525335"], ["updated_at", "2019-09-20 03:33:45.525335"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.3ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Terra Brakus MD"], ["ranking", 2213], ["created_at", "2019-09-20 03:33:45.527877"], ["updated_at", "2019-09-20 03:33:45.527877"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.3ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Brock Kuhn Jr."], ["ranking", 2335], ["created_at", "2019-09-20 03:33:45.530270"], ["updated_at", "2019-09-20 03:33:45.530270"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.3ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Ms. Tami Hayes"], ["ranking", 1540], ["created_at", "2019-09-20 03:33:45.532634"], ["updated_at", "2019-09-20 03:33:45.532634"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.2ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Maxima Ullrich"], ["ranking", 1962], ["created_at", "2019-09-20 03:33:45.534594"], ["updated_at", "2019-09-20 03:33:45.534594"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.2ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Zachery Buckridge"], ["ranking", 2384], ["created_at", "2019-09-20 03:33:45.536634"], ["updated_at", "2019-09-20 03:33:45.536634"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.2ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Tanja Jacobs"], ["ranking", 1897], ["created_at", "2019-09-20 03:33:45.538554"], ["updated_at", "2019-09-20 03:33:45.538554"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.2ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Elbert Gusikowski DVM"], ["ranking", 2303], ["created_at", "2019-09-20 03:33:45.540539"], ["updated_at", "2019-09-20 03:33:45.540539"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.2ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Moises Lebsack"], ["ranking", 1219], ["created_at", "2019-09-20 03:33:45.542549"], ["updated_at", "2019-09-20 03:33:45.542549"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.3ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Antwan Bashirian"], ["ranking", 1010], ["created_at", "2019-09-20 03:33:45.544516"], ["updated_at", "2019-09-20 03:33:45.544516"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.2ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Katia Wilderman I"], ["ranking", 2049], ["created_at", "2019-09-20 03:33:45.546650"], ["updated_at", "2019-09-20 03:33:45.546650"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.2ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Mrs. Hung Grant"], ["ranking", 2079], ["created_at", "2019-09-20 03:33:45.548492"], ["updated_at", "2019-09-20 03:33:45.548492"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Create (0.2ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Vern Ernser"], ["ranking", 2114], ["created_at", "2019-09-20 03:33:45.550388"], ["updated_at", "2019-09-20 03:33:45.550388"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mOpponent Load (0.6ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" ORDER BY "opponents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" ORDER BY "opponents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."opponent_id" = ? LIMIT ?[0m  [["opponent_id", 1], ["LIMIT", 11]]
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."opponent_id" = ? LIMIT ?[0m  [["opponent_id", 1], ["LIMIT", 11]]
