@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_09_20_213233) do
     t.integer "ranking"
     t.string "wins"
     t.string "losses"
+    t.string "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(version: 2019_09_20_213233) do
     t.integer "ranking"
     t.string "wins"
     t.string "losses"
+    t.string "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"

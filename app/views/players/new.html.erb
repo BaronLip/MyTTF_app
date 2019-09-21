@@ -2,15 +2,24 @@
     <h1>Signup</h1>
 </div>
 
+<div class="errors">
+    <p><%= flash[:errors] %></p>
+</div>
+
 <%= form_with model: @player do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %>
     <br>
+    <%= f.radio_button(:gender, "male") %>
+    <%= f.label :male %>
+    <%= f.radio_button(:gender, "female") %>
+    <%= f.label :female %>
+    <br>
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.email_field :email %>
     <br>
     <%= f.label :ranking %>
-    <%= f.text_field :ranking %>
+    <%= f.number_field :ranking, in: 1000..2800, step: 1 %>
     <br>
     <%= f.label :password%>
     <%= f.password_field :password%>

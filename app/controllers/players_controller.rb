@@ -37,7 +37,8 @@ class PlayersController < ApplicationController
             :ranking, 
             :wins, 
             :losses, 
-            :password
+            :password,
+            :gender
         )
     end
 

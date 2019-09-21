@@ -1402,3 +1402,389 @@ Processing by PlayersController#show as HTML
 Completed 200 OK in 48ms (Views: 32.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/players" for ::1 at 2019-09-21 13:36:59 -0500
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/index.html.erb within layouts/application
+  Rendered players/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 411ms (Views: 401.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 13:37:04 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 32ms (Views: 21.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 13:37:17 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 13:57:58 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 37ms (Views: 22.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 13:58:55 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePlayers (20190919201054)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "ranking" integer, "wins" varchar, "losses" varchar, "gender" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190919201054_create_players.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190919201054"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateMatches (20190919224257)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "matches" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "player_id" integer, "opponent_id" integer, "match_type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190919224257_create_matches.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190919224257"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateGames (20190919224405)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "match_id" integer, "player_id" integer, "player_score" integer, "opponent_id" integer, "opponent_score" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190919224405_create_games.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190919224405"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateOpponents (20190920032124)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "opponents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "ranking" integer, "wins" varchar, "losses" varchar, "gender" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190920032124_create_opponents.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190920032124"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigestToPlayer (20190920213233)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "players" ADD "password_digest" varchar[0m
+  ↳ db/migrate/20190920213233_add_password_digest_to_player.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190920213233"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-21 19:05:28.878572"], ["updated_at", "2019-09-21 19:05:28.878572"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/players/new" for ::1 at 2019-09-21 14:10:59 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 38ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 14:12:47 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 15:26:04 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1/+JR6RGNyMM0SBXQGzBIe8SljI8VJkkM3HHGVGurTRh9piWZ/wYufMEElg7CzZno2ALGjyt8jwSCTVfZ8p/KQ==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"2345", "password"=>"[FILTERED]"}, "gender"=>"male", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = ? LIMIT ?[0m  [["username", "Moe"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = ? LIMIT ?[0m  [["email", "moe@moe.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/new
+Completed 200 OK in 324ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:26:04 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:26:13 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 15:40:47 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B91d2XWuay07MxoWpvnKFs9BjlmWCpaCnju6tJQoEtOx1EwIthREt8TmKBndnj1QgzMTcZbz/Zq/Q0jyokzAzg==", "player"=>{"username"=>"Moe", "email"=>"", "ranking"=>"", "password"=>"[FILTERED]"}, "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = ? LIMIT ?[0m  [["username", "Moe"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/new
+Completed 200 OK in 260ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:40:47 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 15:40:58 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hmiqxNglHwEVeI4Gw1vDbjhGcHDRKb5+qLc543+/To8Q7eiu236kLumQNH+I5NFwxhS8zJyC85hTzaSl96aOEA==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1234", "password"=>"[FILTERED]"}, "gender"=>"male", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = ? LIMIT ?[0m  [["username", "Moe"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = ? LIMIT ?[0m  [["email", "moe@moe.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/new
+Completed 200 OK in 262ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:40:58 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 15:41:10 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XUqWKRYlb4szU6pMavbUjshHOxu5l+tp8j7sXTq8j6vLz9RDFX7UpM+7EDUhScaQNhX3p/Q8po8JRHEbsqVPNA==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1234", "password"=>"[FILTERED]"}, "gender"=>"female", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = ? LIMIT ?[0m  [["username", "Moe"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = ? LIMIT ?[0m  [["email", "moe@moe.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/new
+Completed 200 OK in 267ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:41:10 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 15:43:06 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1poS4DM9yUzJmDlCVB61dE64VLYDXnR3Hf8Lp29OARhAH1CKMGZyYzVwgzsfoadqsOqYCk71OZHmhZbh51fBhw==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1234", "password"=>"[FILTERED]"}, "gender"=>"male", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = ? LIMIT ?[0m  [["username", "Moe"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = ? LIMIT ?[0m  [["email", "moe@moe.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/new
+Completed 200 OK in 267ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:43:06 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:43:08 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 15:43:19 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RYlXg9OwgQhpLAaEF4Sd1xc466ESraJ7n5jWB9MCI0jzgEZSEAqukpb5NIts42qRW0p2iRJUyWO+4CRB5WbxVQ==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"2345", "password"=>"[FILTERED]"}, "gender"=>"male", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = ? LIMIT ?[0m  [["username", "Moe"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = ? LIMIT ?[0m  [["email", "moe@moe.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/new
+Completed 200 OK in 276ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:43:20 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 51ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:43:33 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1118.6ms)
+Completed 200 OK in 1400ms (Views: 1380.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 15:43:46 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2GxmwYLPJKuiWe9Ge0JsdJYCQwrFnfLl9ufE23hkaCluZXcQQXULMV2M3UkAJZsy2nDeIsVkmf3XnzadTgC6NA==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1234", "password"=>"[FILTERED]"}, "gender"=>"female", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = ? LIMIT ?[0m  [["username", "Moe"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = ? LIMIT ?[0m  [["email", "moe@moe.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/new
+Completed 200 OK in 268ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:43:46 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:45:19 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 15:45:46 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (78.9ms)
+Completed 200 OK in 97ms (Views: 94.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 15:46:08 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lnVIkdDUEPrX+B6zfk+D89JtFqt2AcbHcwKFpu2Ss1AgfFlAE24/YCgtLLwFKHS1nh+Lg3b4rd9Senfg2/ZhTQ==", "player"=>{"username"=>"Moe", "gender"=>"female", "email"=>"moe@moe.com", "ranking"=>"2345", "password"=>"[FILTERED]"}, "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = ? LIMIT ?[0m  [["username", "Moe"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = ? LIMIT ?[0m  [["email", "moe@moe.com"], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("username", "email", "ranking", "gender", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "Moe"], ["email", "moe@moe.com"], ["ranking", 2345], ["gender", "female"], ["created_at", "2019-09-21 20:46:09.244418"], ["updated_at", "2019-09-21 20:46:09.244418"], ["password_digest", "$2a$12$01z5j4uf8PX9I2PoqzTp1.XOCrrWr6VsnlKD6Zn6a8prMmA4lSCAK"]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/1
+Completed 200 OK in 285ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/players/1" for ::1 at 2019-09-21 15:46:09 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:46
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:27
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
