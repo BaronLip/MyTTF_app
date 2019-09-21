@@ -355,3 +355,1050 @@ Migrating to CreateOpponents (20190920032124)
   [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" ORDER BY "opponents"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."opponent_id" = ? LIMIT ?[0m  [["opponent_id", 1], ["LIMIT", 11]]
   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."opponent_id" = ? LIMIT ?[0m  [["opponent_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddPasswordDigestToPlayer (20190920213233)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "players" ADD "password_digest" varchar[0m
+  ↳ db/migrate/20190920213233_add_password_digest_to_player.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190920213233"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-09-21 00:53:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for ::1 at 2019-09-21 00:53:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/index" for ::1 at 2019-09-21 00:53:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/players" for ::1 at 2019-09-21 00:58:05 -0500
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  Rendered players/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 491ms (Views: 484.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 00:58:33 -0500
+Processing by PlayersController#new as HTML
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:24:in `player_params'
+app/controllers/players_controller.rb:8:in `new'
+Started GET "/players/new" for ::1 at 2019-09-21 00:59:26 -0500
+Processing by PlayersController#new as HTML
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:28:in `player_params'
+app/controllers/players_controller.rb:8:in `new'
+Started GET "/players/new" for ::1 at 2019-09-21 00:59:55 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/views/players/new.html.erb:24: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/players/new.html.erb:24: syntax error, unexpected end-of-input, expecting end
+Started GET "/players/new" for ::1 at 2019-09-21 01:00:45 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 01:01:12 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 01:03:02 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 01:06:00 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 27ms (Views: 15.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 01:06:15 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lWuQN6fjG8ZUp5CqzUULeZIUGfSfglBZyPTowi2qa5kjYoHmZFk0XKtyoqW2Ivw/3maE3J97O0HpjBqEG865hA==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1497", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:32:in `player_params'
+app/controllers/players_controller.rb:12:in `create'
+Started POST "/players" for ::1 at 2019-09-21 01:06:54 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lWuQN6fjG8ZUp5CqzUULeZIUGfSfglBZyPTowi2qa5kjYoHmZFk0XKtyoqW2Ivw/3maE3J97O0HpjBqEG865hA==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1497", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:32:in `player_params'
+app/controllers/players_controller.rb:12:in `create'
+Started POST "/players" for ::1 at 2019-09-21 01:07:43 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lWuQN6fjG8ZUp5CqzUULeZIUGfSfglBZyPTowi2qa5kjYoHmZFk0XKtyoqW2Ivw/3maE3J97O0HpjBqEG865hA==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1497", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:32:in `player_params'
+app/controllers/players_controller.rb:12:in `create'
+Started POST "/players" for ::1 at 2019-09-21 01:12:06 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lWuQN6fjG8ZUp5CqzUULeZIUGfSfglBZyPTowi2qa5kjYoHmZFk0XKtyoqW2Ivw/3maE3J97O0HpjBqEG865hA==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1497", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:32:in `player_params'
+app/controllers/players_controller.rb:12:in `create'
+Started POST "/players" for ::1 at 2019-09-21 01:12:14 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lWuQN6fjG8ZUp5CqzUULeZIUGfSfglBZyPTowi2qa5kjYoHmZFk0XKtyoqW2Ivw/3maE3J97O0HpjBqEG865hA==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1497", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:32:in `player_params'
+app/controllers/players_controller.rb:12:in `create'
+Started POST "/players" for ::1 at 2019-09-21 01:14:57 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lWuQN6fjG8ZUp5CqzUULeZIUGfSfglBZyPTowi2qa5kjYoHmZFk0XKtyoqW2Ivw/3maE3J97O0HpjBqEG865hA==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1497", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:32:in `player_params'
+app/controllers/players_controller.rb:12:in `create'
+Started GET "/players/new" for ::1 at 2019-09-21 01:15:02 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/players/new" for ::1 at 2019-09-21 01:15:16 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/players/new" for ::1 at 2019-09-21 01:15:47 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/players/new" for ::1 at 2019-09-21 01:16:46 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/players/new" for ::1 at 2019-09-21 01:16:52 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/players/new" for ::1 at 2019-09-21 01:18:17 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/players/new" for ::1 at 2019-09-21 01:18:47 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/players/new" for ::1 at 2019-09-21 01:19:04 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/players/new" for ::1 at 2019-09-21 01:21:23 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/players/new" for ::1 at 2019-09-21 01:21:28 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"players"}, missing required keys: [:id]):
+    3: </div>
+    4: 
+    5: <div id="signup_form">
+    6:     <%= form_tag player_path, method: :post do %>
+    7:     
+    8:     <%= label_tag :username %>
+    9:     <%= text_field_tag :username %>
+  
+app/views/players/new.html.erb:6:in `_app_views_players_new_html_erb___4477387561747380426_70110838714800'
+Started GET "/players/new" for ::1 at 2019-09-21 01:24:17 -0500
+Processing by PlayersController#new as HTML
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 242ms (Views: 240.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 01:24:47 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5uN89ADcTNorsSSxVEe+EbiIKPEy6jJBDKH0iAuDADJQ6m0lw2ZjQNRkFr4vIElX9Pq12TITWVkt2QbOPefSLw==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"2664", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:32:in `player_params'
+app/controllers/players_controller.rb:12:in `create'
+Started POST "/players" for ::1 at 2019-09-21 01:27:32 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5uN89ADcTNorsSSxVEe+EbiIKPEy6jJBDKH0iAuDADJQ6m0lw2ZjQNRkFr4vIElX9Pq12TITWVkt2QbOPefSLw==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"2664", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:33:in `player_params'
+app/controllers/players_controller.rb:13:in `create'
+Started GET "/players/new" for ::1 at 2019-09-21 01:27:36 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 01:27:57 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+fIplC2Eyo8hNuWIKe3kFvQRjFwwoMSuGSXpTDkGxZt7tl3kww8sMNR6ZlbwEDWF6LbGXA76AqZHGXjBoDJCw==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1600", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:33:in `player_params'
+app/controllers/players_controller.rb:13:in `create'
+Started POST "/players" for ::1 at 2019-09-21 01:31:36 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2+fIplC2Eyo8hNuWIKe3kFvQRjFwwoMSuGSXpTDkGxZt7tl3kww8sMNR6ZlbwEDWF6LbGXA76AqZHGXjBoDJCw==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1600", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:33:in `player_params'
+app/controllers/players_controller.rb:13:in `create'
+Started GET "/players/new" for ::1 at 2019-09-21 01:31:40 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 15.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 01:31:52 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jlE15yoFwT1kW4z0A1z9/t40wZ/H4nkITCSNP7anJrw4WCQ26b/up5uOvvt4Owq4kkZct8cbEhBtXH95gMP0oQ==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1758", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:33:in `player_params'
+app/controllers/players_controller.rb:13:in `create'
+Started GET "/players/new" for ::1 at 2019-09-21 01:34:01 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 235ms (Views: 217.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 01:34:19 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mao3roxhgQtg5/RBTzGZjCWKLlBmUGYLBxlngTpzByovoyZ/T9uukZ8yxk40Vm7KafizeGapDRMmYZXHDBfVNw==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1389", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:33:in `player_params'
+app/controllers/players_controller.rb:13:in `create'
+Started POST "/players" for ::1 at 2019-09-21 01:47:05 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mao3roxhgQtg5/RBTzGZjCWKLlBmUGYLBxlngTpzByovoyZ/T9uukZ8yxk40Vm7KafizeGapDRMmYZXHDBfVNw==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1389", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:37
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:33:in `player_params'
+app/controllers/players_controller.rb:13:in `create'
+Started POST "/players" for ::1 at 2019-09-21 01:48:58 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mao3roxhgQtg5/RBTzGZjCWKLlBmUGYLBxlngTpzByovoyZ/T9uukZ8yxk40Vm7KafizeGapDRMmYZXHDBfVNw==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1389", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+Completed 400 Bad Request in 102335ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:34:in `player_params'
+app/controllers/players_controller.rb:13:in `create'
+Started GET "/players/new" for ::1 at 2019-09-21 01:51:46 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 224ms (Views: 210.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/players/new" for ::1 at 2019-09-21 01:51:57 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/players/new" for ::1 at 2019-09-21 01:53:13 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/players/new" for ::1 at 2019-09-21 01:53:17 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 18.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/players/new" for ::1 at 2019-09-21 01:53:27 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/players/new" for ::1 at 2019-09-21 01:54:48 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/players/new"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/players/new" for ::1 at 2019-09-21 01:54:51 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 01:55:04 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L3+Gq07kMh5Cd1INITJClJ+5HDrDpzbzbgLUYKunYrOZdpd6jV4dhL2iYAJaVbXS08uBEsNeXetPeiYmncOwrg==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1647", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+Completed 400 Bad Request in 21640ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:34:in `player_params'
+app/controllers/players_controller.rb:13:in `create'
+Started POST "/players" for ::1 at 2019-09-21 02:05:23 -0500
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L3+Gq07kMh5Cd1INITJClJ+5HDrDpzbzbgLUYKunYrOZdpd6jV4dhL2iYAJaVbXS08uBEsNeXetPeiYmncOwrg==", "username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1647", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+Started GET "/players/new" for ::1 at 2019-09-21 02:05:27 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1094.6ms)
+Completed 200 OK in 1369ms (Views: 1366.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 02:05:49 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 02:06:21 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 02:06:41 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oXChBc2OTgqrltLjxS4aaQuDh8n+WZgTc7GG557GBcAXebDUDjRhkFRD4Oy+Se0vR/Ea4f6g8wtSyXShqKLX3Q==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"2345", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+Unpermitted parameters: :password, :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/new
+Completed 200 OK in 13687ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 02:06:55 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 02:07:34 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ct/+4VBOaN579YO2k+qLnadLySrS98iX0A/wRxWj4nnkWryLUxXT8YcdOc/YVZmDWRkFlp9chXErdW0Bnboi5g==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+Unpermitted parameters: :password, :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/new
+Completed 200 OK in 73110ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 02:08:47 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 02:09:34 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 02:09:43 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PCtZzlk6ks6mTq2Sd7EQ+jfm6lPXvA+70jcZKyFvkkyKIkgfmoC9VFmbn50M1ue8e5R3e9dFZKPzT+ttFwtAUQ==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1234", "password"=>"[FILTERED]"}, "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+Unpermitted parameter: :password
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/new
+Completed 200 OK in 2669ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 02:09:46 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 02:16:25 -0500
+Completed 400 Bad Request in 685023ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:34:in `player_params'
+app/controllers/players_controller.rb:13:in `create'
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6uvx5dqunOIBQCM4xQSo993H3Hb62JHcsIg2szP3rAh8brOP2fUnzf2omUGOu7rpI5UQyrdz3DpL8qv1u+5slw==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1234", "password"=>"[FILTERED]"}, "commit"=>"Signup"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/models/player.rb:5:in `<class:Player>'
+app/models/player.rb:3:in `<main>'
+app/controllers/players_controller.rb:38:in `find_player'
+Started POST "/players" for ::1 at 2019-09-21 02:17:14 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6uvx5dqunOIBQCM4xQSo993H3Hb62JHcsIg2szP3rAh8brOP2fUnzf2omUGOu7rpI5UQyrdz3DpL8qv1u+5slw==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"1234", "password"=>"[FILTERED]"}, "commit"=>"Signup"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/models/player.rb:5:in `<class:Player>'
+app/models/player.rb:3:in `<main>'
+app/controllers/players_controller.rb:38:in `find_player'
+Started GET "/players/new" for ::1 at 2019-09-21 02:25:17 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PlayersController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/models/player.rb:3:in `<class:Player>'
+app/models/player.rb:1:in `<main>'
+app/controllers/players_controller.rb:45:in `find_player'
+Started GET "/players/new" for ::1 at 2019-09-21 02:25:24 -0500
+Processing by PlayersController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/models/player.rb:3:in `<class:Player>'
+app/models/player.rb:1:in `<main>'
+app/controllers/players_controller.rb:45:in `find_player'
+Started GET "/players/new" for ::1 at 2019-09-21 02:25:33 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (132.8ms)
+Completed 200 OK in 356ms (Views: 343.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 02:25:49 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 02:25:59 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aX9qgFclj5HprhOA739uKcwbsiv7WwOEj9+PkVRfwcnfdntRlJ+gCxZ7IY+UGJlvgGkvA/uiaJyup33XYjsT1A==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"2343", "password"=>"[FILTERED]"}, "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+Unpermitted parameter: :password
+Unpermitted parameter: :password
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/new
+Completed 200 OK in 149179ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 02:28:28 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 17.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/players/new" for ::1 at 2019-09-21 02:28:33 -0500
+Processing by PlayersController#new as HTML
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  Rendering players/new.html.erb within layouts/application
+  Rendered players/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/players" for ::1 at 2019-09-21 02:29:03 -0500
+Processing by PlayersController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"03H/8XePVG6VfAHYkNnAAHjzOvZU7LyhE+GYGZWwXa1leO4gtDV79GqpM9frvjdGNIGn3lQV17kymWpfo9SPsA==", "player"=>{"username"=>"Moe", "email"=>"moe@moe.com", "ranking"=>"2345", "password"=>"[FILTERED]"}, "commit"=>"Signup"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+  [1m[36mPlayer Create (2.7ms)[0m  [1m[32mINSERT INTO "players" ("username", "email", "ranking", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Moe"], ["email", "moe@moe.com"], ["ranking", 2345], ["created_at", "2019-09-21 07:29:03.412142"], ["updated_at", "2019-09-21 07:29:03.412142"], ["password_digest", "$2a$12$MrnsnhK6j.mDzoNJTABr4O8oYp9.o2nVlot3gJOxadY7nx2Q/bEn6"]]
+  ↳ app/controllers/players_controller.rb:15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:15
+Redirected to http://localhost:3000/players/2
+Completed 200 OK in 264ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-21 02:29:03 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:45
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:27
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 48ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+

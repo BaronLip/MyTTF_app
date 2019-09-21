@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_20_032124) do
+ActiveRecord::Schema.define(version: 2019_09_20_213233) do
 
   create_table "games", force: :cascade do |t|
     t.integer "match_id"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2019_09_20_032124) do
     t.string "losses"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end
