@@ -1,5 +1,6 @@
 class PlayersController < ApplicationController
     before_action :find_player, only: [:show, :edit, :update, :destroy]
+    before_action :require_login
     
     def index
         @players = Player.all
@@ -40,10 +41,12 @@ class PlayersController < ApplicationController
     def destroy
     end
     
-
-    
     private
-    
+
+    def require_login
+        return head(:forbidden) unless session.include? :player_id
+    end
+
     def player_params
         params.require(:player).permit(
             :username, 

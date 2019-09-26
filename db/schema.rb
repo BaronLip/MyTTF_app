@@ -12,46 +12,46 @@
 
 ActiveRecord::Schema.define(version: 2019_09_26_012504) do
 
-  create_table "games", force: :cascade do |t|
-    t.integer "match_id"
-    t.integer "player_id"
-    t.integer "player_score"
-    t.integer "opponent_id"
-    t.integer "opponent_score"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+    create_table "games", force: :cascade do |t|
+        t.integer "match_id"
+        t.integer "player_id"
+        t.integer "player_score"
+        t.integer "opponent_id"
+        t.integer "opponent_score"
+        t.datetime "created_at", null: false
+        t.datetime "updated_at", null: false
+    end
 
-  create_table "matches", force: :cascade do |t|
-    t.integer "player_id"
-    t.integer "opponent_id"
-    t.string "match_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text "notes"
-    t.string "date"
-  end
+    create_table "matches", force: :cascade do |t|
+        t.integer "player_id"
+        t.integer "opponent_id"
+        t.string "match_type"
+        t.datetime "created_at", null: false
+        t.datetime "updated_at", null: false
+        t.text "notes"
+        t.string "date"
+    end
 
-  create_table "opponents", force: :cascade do |t|
-    t.string "username"
-    t.integer "ranking"
-    t.string "wins"
-    t.string "losses"
-    t.string "gender"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+    create_table "opponents", force: :cascade do |t|
+        t.string "username"
+        t.integer "ranking"
+        t.string "wins"
+        t.string "losses"
+        t.string "gender"
+        t.datetime "created_at", null: false
+        t.datetime "updated_at", null: false
+    end
 
-  create_table "players", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.integer "ranking"
-    t.string "wins"
-    t.string "losses"
-    t.string "gender"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "password_digest"
-  end
+    create_table "players", force: :cascade do |t|
+        t.string "username"
+        t.string "email"
+        t.integer "ranking"
+        t.string "wins"
+        t.string "losses"
+        t.string "gender"
+        t.datetime "created_at", null: false
+        t.datetime "updated_at", null: false
+        t.string "password_digest"
+    end
 
 end
