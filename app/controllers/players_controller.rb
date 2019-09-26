@@ -1,8 +1,13 @@
 class PlayersController < ApplicationController
-    before_action :find_player
-
+    before_action :find_player, only: [:show, :edit, :update, :destroy]
+    
     def index
         @players = Player.all
+    end
+
+    def show
+        # before_action
+        @match_scores = []
     end
 
     def new
@@ -20,17 +25,26 @@ class PlayersController < ApplicationController
 			flash[:errors] = @player.errors.full_messages.join(", ")
 			redirect_to new_player_path
 		end	
-        
+    end
+
+    def edit
+        #before_action
+    end
+
+    def update
+        #before_action
+        @player.update(player_params)
+        redirect_to player_path(@player)
+    end
+
+    def destroy
     end
     
-    def show
-        @player = Player.find_by(:id => params[:id])
-    end
+
     
     private
     
     def player_params
-        # binding.pry
         params.require(:player).permit(
             :username, 
             :email, 
