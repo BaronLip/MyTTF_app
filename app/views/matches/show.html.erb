@@ -1,0 +1,14 @@
+<div class="match_stats">
+    <%= @match.date %>
+    <br>
+    <%= @match.opponent.username %>
+    <br>
+    <% n = 0 %>
+    <% @match.games.each_with_index do |g, i| %>
+        <label><%="Game #{i += 1} score:" %></label>
+        <%= "#{g.player_score} : #{g.opponent_score}"%><br>
+    <% end %>
+    <br>
+
+
+</div>

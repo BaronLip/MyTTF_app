@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
     
+    resources :players, only: [:show] do
+        resources :matches, only: [:new, :create, :edit, :update, :destroy]        
+    end
+
+    resources :players, except: [:index] 
+    resources :matches
     resources :opponents, except: [:index]
     resources :games 
-    resources :matches
-    resources :players, except: [:index]
-    resources :sessions, only: [:new, :create, :destroy]    
+    resources :sessions, only: [:new, :create, :destroy]
+
 
     root to: 'application#welcome'
     get 'signup', to: 'players#new', as: 'signup'

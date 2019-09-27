@@ -32,8 +32,8 @@
 - [x] Create a user story.
 - [x] Determine classes, attributes and associations.
 - [x] Test associations.
-- [ ] Start creating routes.
-- [ ] Create sessions, signup and Login function.
+- [x] Start creating routes.
+- [x] Create sessions, signup and Login function.
 - [ ] Setup Validations.
 - [ ] Use can search other users by ranking.
 - [ ] Write instance method to tally up wins/losses for Player.

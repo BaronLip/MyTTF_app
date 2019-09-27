@@ -1,16 +1,42 @@
 class MatchesController < ApplicationController
-    before_action :find_match, only:[:show, :edit, :update, :destroy]
+    # (Not used cause of nested routes.) before_action :find_match, only:[:show, :edit, :update, :destroy]
+    
+    def show
+        if params[:player_id]
+        	@match = Player.find(params[:player_id]).matchs.find(params[:id])
+        else
+        	@match = Match.find(params[:id])
+        end
+    end    
     
     def new
-        @match = Match.new
+        #If there is a player_id in params and the player_id does not exist in datebase, redirect to players index. 
+        if params[:player_id] && !Player.exists?(params[:player_id])
+            redirect_to players_path, alert: "Player not found."
+        else
+            @match = Match.new(player_id: params[:player_id])
+            # if using static number of game fields:
+            
+            @match.games.build(player_id: params[:player_id])
+            @match.games.build(player_id: params[:player_id])
+            @match.games.build(player_id: params[:player_id])
+            @match.games.build(player_id: params[:player_id])
+            @match.games.build(player_id: params[:player_id])
+            @match.games.build(player_id: params[:player_id])
+            @match.games.build(player_id: params[:player_id])
+        end
     end
 
     def create
+        # raise params.inspect
         @match = Match.new(match_params)
-    end
-
-    def show
-        
+        # binding.pry
+        if @match.save
+            redirect_to match_path(@match)
+        else
+            flash[:errors] = @match.errors.full_messages
+            render 'new'
+        end
     end
 
     def edit
@@ -29,7 +55,20 @@ class MatchesController < ApplicationController
     private
 
     def match_params
-        params.require(:match).permit(:match_type, :notes, :date, :player_id, :opponent_id)
+        params.require(:match).permit(
+        :match_type, 
+        :notes, 
+        :date, 
+        :player_id, 
+        :opponent_id,
+            games_attributes: [
+                :match_id,
+                :player_id,
+                :player_score,
+                :opponent_id,
+                :opponent_score,
+                :address_type]
+        )
     end
 
     def find_match
