@@ -3,12 +3,14 @@
     <br>
     <%= @match.opponent.username %>
     <br>
-    <% n = 0 %>
-    <% @match.games.each_with_index do |g, i| %>
-        <label><%="Game #{i += 1} score:" %></label>
-        <%= "#{g.player_score} : #{g.opponent_score}"%><br>
-    <% end %>
+    <%= @match.notes %>
     <br>
-
-
 </div>
+ 
+<% @match.games.each_with_index do |g, i| %>
+    <label><%="Game #{i += 1} score:" %></label>
+    <%= "#{g.player_score} : #{g.opponent_score}"%><br>
+<% end %>
+<br>
+
+<%= button_to "Home", player_path(@match.player), method: :get %>

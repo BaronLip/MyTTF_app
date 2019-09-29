@@ -6818,3 +6818,1862 @@ Processing by MatchesController#show as HTML
 Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/matches/7" for ::1 at 2019-09-28 19:07:14 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/views/matches/show.html.erb:9
+  Rendered matches/show.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 130ms (Views: 87.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/matches/7" for ::1 at 2019-09-28 19:09:47 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/views/matches/show.html.erb:16: syntax error, unexpected tLABEL, expecting ')'
+..._path(@match.player_id) method: :get );
+...                        ^~~~~~~):
+  
+app/views/matches/show.html.erb:16: syntax error, unexpected tLABEL, expecting ')'
+Started GET "/matches/7" for ::1 at 2019-09-28 19:12:55 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/views/matches/show.html.erb:16: syntax error, unexpected tLABEL, expecting ')'
+...yer_path(@match.player) method: :get );
+...                        ^~~~~~~):
+  
+app/views/matches/show.html.erb:16: syntax error, unexpected tLABEL, expecting ')'
+Started GET "/matches/7" for ::1 at 2019-09-28 19:13:09 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/views/matches/show.html.erb:16: syntax error, unexpected tLABEL, expecting ')'
+...yer_path(@match.player) method: 'get' );
+...                        ^~~~~~~):
+  
+app/views/matches/show.html.erb:16: syntax error, unexpected tLABEL, expecting ')'
+Started GET "/matches/7" for ::1 at 2019-09-28 19:15:09 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/views/matches/show.html.erb:16: syntax error, unexpected tSTRING_BEG, expecting ')'
+..._path(@match.player), :method 'get' );
+...                              ^):
+  
+app/views/matches/show.html.erb:16: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/matches/7" for ::1 at 2019-09-28 19:16:10 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/views/matches/show.html.erb:16: syntax error, unexpected tSTRING_BEG, expecting ')'
+...player_path(@player), :method 'get' );
+...                              ^):
+  
+app/views/matches/show.html.erb:16: syntax error, unexpected tSTRING_BEG, expecting ')'
+Started GET "/matches/7" for ::1 at 2019-09-28 19:18:56 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:19:00 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:35
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  Rendered players/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:19:18 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:35
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  Rendered players/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:19:20 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:35
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  Rendered players/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:19:20 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:35
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  Rendered players/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:19:21 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:35
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  Rendered players/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:19:22 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:35
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  Rendered players/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/matches/7" for ::1 at 2019-09-28 19:19:23 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/views/matches/show.html.erb:16: syntax error, unexpected ':', expecting ')'
+..._path(@match.player), :method :get );
+...                              ^):
+  
+app/views/matches/show.html.erb:16: syntax error, unexpected ':', expecting ')'
+Started GET "/matches/7" for ::1 at 2019-09-28 19:19:25 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/views/matches/show.html.erb:16: syntax error, unexpected ':', expecting ')'
+..._path(@match.player), :method :get );
+...                              ^):
+  
+app/views/matches/show.html.erb:16: syntax error, unexpected ':', expecting ')'
+Started GET "/matches/7" for ::1 at 2019-09-28 19:22:11 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:22:14 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:35
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  Rendered players/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:22:42 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:35
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  Rendered players/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:22:59 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:37
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:41
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:41
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:41
+  Rendered players/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:23:45 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:35
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:39
+  Rendered players/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:24:03 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:37
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:41
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:41
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:41
+  Rendered players/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:24:15 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:37
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:41
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:41
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:41
+  Rendered players/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:24:29 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  Rendered players/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 19:27:17 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 1]]
+  ↳ app/helpers/matches_helper.rb:31
+  Rendered players/show.html.erb within layouts/application (33.5ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fc09f3d6c08>):
+    42:                 <td><%= match_status(m) %></td>
+    43:                 <td><%= m.opponent.username %></td>
+    44:                 <td><%= m.match_type %></td>
+    45:                 <td><%= match_scores(m) %></td>
+    46:                 <td><%= m.notes %></td>
+    47:             </tr>
+    48:             <% end %>
+  
+app/helpers/matches_helper.rb:32:in `block in match_scores'
+app/helpers/matches_helper.rb:31:in `match_scores'
+app/views/players/show.html.erb:45:in `block in _app_views_players_show_html_erb___1076854192197555642_70232638695120'
+app/views/players/show.html.erb:39:in `_app_views_players_show_html_erb___1076854192197555642_70232638695120'
+Started GET "/matches/7" for ::1 at 2019-09-28 19:34:06 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (139.3ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `player_score' for #<#<Class:0x00007fc09eea7ef8>:0x00007fc09eea6558>
+Did you mean?  player_url):
+     9:  
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= game_score %>
+    13:     <%= "#{g.player_score} : #{g.opponent_score}"%><br>
+    14: <% end %>
+    15: <br>
+  
+app/helpers/games_helper.rb:5:in `game_score'
+app/views/matches/show.html.erb:12:in `block in _app_views_matches_show_html_erb__4222167624941175057_70232638284820'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4222167624941175057_70232638284820'
+Started GET "/matches/7" for ::1 at 2019-09-28 19:35:01 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (168049.0ms)
+Completed 500 Internal Server Error in 168061ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `player_score' for #<#<Class:0x00007fc09f36cd30>:0x00007fc09f37f098>
+Did you mean?  player_url):
+     9:  
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= g.game_score %>
+    13:     <%= "#{g.player_score} : #{g.opponent_score}"%><br>
+    14: <% end %>
+    15: <br>
+  
+app/helpers/games_helper.rb:6:in `game_score'
+app/views/matches/show.html.erb:12:in `block in _app_views_matches_show_html_erb__4222167624941175057_70232640809720'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4222167624941175057_70232640809720'
+Started GET "/matches/7" for ::1 at 2019-09-28 19:37:52 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fc0978a78e8>):
+     9:  
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= g.game_score %>
+    13:     <%= "#{g.player_score} : #{g.opponent_score}"%><br>
+    14: <% end %>
+    15: <br>
+  
+app/views/matches/show.html.erb:12:in `block in _app_views_matches_show_html_erb__4222167624941175057_70232580708980'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4222167624941175057_70232580708980'
+Started GET "/matches/7" for ::1 at 2019-09-28 19:38:37 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (62.9ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fa7f6b96158>):
+     9:  
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= g.game_score %>
+    13:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    14: <% end %>
+    15: <br>
+  
+app/views/matches/show.html.erb:12:in `block in _app_views_matches_show_html_erb__242438335762804735_70179672973780'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__242438335762804735_70179672973780'
+Started GET "/matches/7" for ::1 at 2019-09-28 22:13:46 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fa7f4297388>):
+     9:  
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= g.game_score %>
+    13:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    14: <% end %>
+    15: <br>
+  
+app/views/matches/show.html.erb:12:in `block in _app_views_matches_show_html_erb__242438335762804735_70179677632020'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__242438335762804735_70179677632020'
+Started GET "/matches/7" for ::1 at 2019-09-28 22:13:58 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fa7f701b570>):
+     9:  
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= g.game_score %>
+    13:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    14: <% end %>
+    15: <br>
+  
+app/views/matches/show.html.erb:12:in `block in _app_views_matches_show_html_erb__242438335762804735_70179694373640'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__242438335762804735_70179694373640'
+Started GET "/players/2/matches/new" for ::1 at 2019-09-28 22:14:22 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"2"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:14
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/new.html.erb within layouts/application (288.3ms)
+Completed 200 OK in 548ms (Views: 495.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/matches" for ::1 at 2019-09-28 22:15:40 -0500
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMEmBpmIMTtLdo10YtpfyN1rkOXSCgdY2+9KTAH6AeqmyDfXWjIeobSjv3sZvaiOkRkNzdLzbED6l7gKN57T9w==", "match"=>{"player_id"=>"2", "opponent_id"=>"1", "date"=>"2019-09-05", "match_type"=>"3", "notes"=>"Match notes here. ", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"12", "opponent_score"=>"10"}, "1"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"10", "opponent_score"=>"12"}, "2"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"12", "opponent_score"=>"10"}, "3"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "4"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mMatch Create (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 2], ["opponent_id", 1], ["match_type", "3"], ["created_at", "2019-09-29 03:15:40.540662"], ["updated_at", "2019-09-29 03:15:40.540662"], ["notes", "Match notes here. "], ["date", "2019-09-05"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["match_id", 8], ["player_id", 2], ["player_score", 12], ["opponent_score", 10], ["created_at", "2019-09-29 03:15:40.541921"], ["updated_at", "2019-09-29 03:15:40.541921"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["match_id", 8], ["player_id", 2], ["player_score", 10], ["opponent_score", 12], ["created_at", "2019-09-29 03:15:40.542795"], ["updated_at", "2019-09-29 03:15:40.542795"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["match_id", 8], ["player_id", 2], ["player_score", 12], ["opponent_score", 10], ["created_at", "2019-09-29 03:15:40.543363"], ["updated_at", "2019-09-29 03:15:40.543363"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+Redirected to http://localhost:3000/matches/8
+Completed 302 Found in 13ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/matches/8" for ::1 at 2019-09-28 22:15:40 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 8]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e30b52c8>):
+     9:  
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= g.game_score %>
+    13:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    14: <% end %>
+    15: <br>
+  
+app/views/matches/show.html.erb:12:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278306900400'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278306900400'
+Started GET "/matches/8" for ::1 at 2019-09-28 22:18:52 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 8]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (25.1ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e28aa268>):
+     9:  
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= g.game_score %>
+    13:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    14: <% end %>
+    15: <br>
+  
+app/views/matches/show.html.erb:12:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278259721260'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278259721260'
+Started GET "/matches/8" for ::1 at 2019-09-28 22:19:24 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 8]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e3a01f20>):
+     9:  
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= g.game_score %>
+    13:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    14: <% end %>
+    15: <br>
+  
+app/views/matches/show.html.erb:12:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278311582080'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278311582080'
+Started POST "/matches" for ::1 at 2019-09-28 22:19:29 -0500
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EMEmBpmIMTtLdo10YtpfyN1rkOXSCgdY2+9KTAH6AeqmyDfXWjIeobSjv3sZvaiOkRkNzdLzbED6l7gKN57T9w==", "match"=>{"player_id"=>"2", "opponent_id"=>"1", "date"=>"2019-09-05", "match_type"=>"3", "notes"=>"Match notes here. ", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"12", "opponent_score"=>"10"}, "1"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"10", "opponent_score"=>"12"}, "2"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"12", "opponent_score"=>"10"}, "3"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "4"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mMatch Create (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 2], ["opponent_id", 1], ["match_type", "3"], ["created_at", "2019-09-29 03:19:29.128662"], ["updated_at", "2019-09-29 03:19:29.128662"], ["notes", "Match notes here. "], ["date", "2019-09-05"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.2ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["match_id", 9], ["player_id", 2], ["player_score", 12], ["opponent_score", 10], ["created_at", "2019-09-29 03:19:29.130201"], ["updated_at", "2019-09-29 03:19:29.130201"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["match_id", 9], ["player_id", 2], ["player_score", 10], ["opponent_score", 12], ["created_at", "2019-09-29 03:19:29.131472"], ["updated_at", "2019-09-29 03:19:29.131472"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["match_id", 9], ["player_id", 2], ["player_score", 12], ["opponent_score", 10], ["created_at", "2019-09-29 03:19:29.132188"], ["updated_at", "2019-09-29 03:19:29.132188"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+Redirected to http://localhost:3000/matches/9
+Completed 302 Found in 49ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/matches/9" for ::1 at 2019-09-28 22:19:29 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 9]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e3497b70>):
+     9:  
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= g.game_score %>
+    13:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    14: <% end %>
+    15: <br>
+  
+app/views/matches/show.html.erb:12:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278308933220'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278308933220'
+Started GET "/players/2/matches/new" for ::1 at 2019-09-28 22:19:33 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"2"}
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:14
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 29ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/matches" for ::1 at 2019-09-28 22:20:11 -0500
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tNqb1o14mpqzsEkWmBSLFMYsUJ8nQkyY6VQdx0cmc8gC04oHTsK1AExlexnjc3xSil7Ntye7J4DILO+BcUKh1Q==", "match"=>{"player_id"=>"2", "opponent_id"=>"1", "date"=>"2019-09-04", "match_type"=>"5", "notes"=>"Match notes here. ", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"9"}, "1"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"8"}, "2"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"7", "opponent_score"=>"11"}, "3"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6"}, "4"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mMatch Create (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 2], ["opponent_id", 1], ["match_type", "5"], ["created_at", "2019-09-29 03:20:11.668190"], ["updated_at", "2019-09-29 03:20:11.668190"], ["notes", "Match notes here. "], ["date", "2019-09-04"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["match_id", 10], ["player_id", 2], ["player_score", 11], ["opponent_score", 9], ["created_at", "2019-09-29 03:20:11.669237"], ["updated_at", "2019-09-29 03:20:11.669237"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["match_id", 10], ["player_id", 2], ["player_score", 11], ["opponent_score", 8], ["created_at", "2019-09-29 03:20:11.669977"], ["updated_at", "2019-09-29 03:20:11.669977"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["match_id", 10], ["player_id", 2], ["player_score", 7], ["opponent_score", 11], ["created_at", "2019-09-29 03:20:11.670695"], ["updated_at", "2019-09-29 03:20:11.670695"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["match_id", 10], ["player_id", 2], ["player_score", 11], ["opponent_score", 6], ["created_at", "2019-09-29 03:20:11.671312"], ["updated_at", "2019-09-29 03:20:11.671312"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+Redirected to http://localhost:3000/matches/10
+Completed 302 Found in 11ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/matches/10" for ::1 at 2019-09-28 22:20:11 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e2bec598>):
+     9:  
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= g.game_score %>
+    13:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    14: <% end %>
+    15: <br>
+  
+app/views/matches/show.html.erb:12:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278316807280'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278316807280'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:13 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (24.7ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e60732f8>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     binding.pry
+    13:     <%= g.game_score %>
+    14:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    15: <% end %>
+    16: <br>
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278314519920'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278314519920'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:15 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e319d0a0>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     binding.pry
+    13:     <%= g.game_score %>
+    14:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    15: <% end %>
+    16: <br>
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278307395980'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278307395980'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:16 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e3d6c4d0>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     binding.pry
+    13:     <%= g.game_score %>
+    14:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    15: <% end %>
+    16: <br>
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278313589620'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278313589620'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:17 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e28635c0>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     binding.pry
+    13:     <%= g.game_score %>
+    14:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    15: <% end %>
+    16: <br>
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278251953780'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278251953780'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:18 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e334c310>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     binding.pry
+    13:     <%= g.game_score %>
+    14:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    15: <% end %>
+    16: <br>
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278308279080'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278308279080'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:18 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e304bf08>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     binding.pry
+    13:     <%= g.game_score %>
+    14:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    15: <% end %>
+    16: <br>
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278312635220'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278312635220'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:18 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e29e2ec8>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     binding.pry
+    13:     <%= g.game_score %>
+    14:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    15: <% end %>
+    16: <br>
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278303221040'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278303221040'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:19 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e44c3af8>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     binding.pry
+    13:     <%= g.game_score %>
+    14:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    15: <% end %>
+    16: <br>
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278317412020'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278317412020'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:19 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e3f8f370>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     binding.pry
+    13:     <%= g.game_score %>
+    14:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    15: <% end %>
+    16: <br>
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278314687680'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278314687680'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:19 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e42f9470>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     binding.pry
+    13:     <%= g.game_score %>
+    14:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    15: <% end %>
+    16: <br>
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278316474440'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278316474440'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:20 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e2d74960>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     binding.pry
+    13:     <%= g.game_score %>
+    14:     <!-- <%= "#{g.player_score} : #{g.opponent_score}"%><br>-->
+    15: <% end %>
+    16: <br>
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278305218480'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278305218480'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:24:36 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:17
+  Rendered matches/show.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/matches/10" for ::1 at 2019-09-28 22:25:55 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  Rendered matches/show.html.erb within layouts/application (24.6ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5e3bed5f0>):
+    10: <% @match.games.each_with_index do |g, i| %>
+    11:     <label><%="Game #{i += 1} score:" %></label>
+    12:     <%= "#{g.player_score} : #{g.opponent_score}"%><br>
+    13:     <%= g.game_score %>
+    14: <% end %>
+    15: <br>
+    16: 
+  
+app/views/matches/show.html.erb:13:in `block in _app_views_matches_show_html_erb__4087484375100383433_70278315710660'
+app/views/matches/show.html.erb:10:in `each_with_index'
+app/views/matches/show.html.erb:10:in `_app_views_matches_show_html_erb__4087484375100383433_70278315710660'
+Started GET "/matches/10" for ::1 at 2019-09-28 22:28:03 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 57ms (Views: 45.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 22:28:10 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 1]]
+  ↳ app/helpers/matches_helper.rb:33
+  Rendered players/show.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `game_score' for #<Game:0x00007fd5ddd0fe70>):
+    43:                 <td><%= m.opponent.username %></td>
+    44:                 <td><%= m.match_type %></td>
+    45:                 <% @match_scores = [] %>
+    46:                 <td><%= match_scores(m) %></td>
+    47:                 <td><%= m.notes %></td>
+    48:             </tr>
+    49:             <% end %>
+  
+app/helpers/matches_helper.rb:34:in `block in match_scores'
+app/helpers/matches_helper.rb:33:in `match_scores'
+app/views/players/show.html.erb:46:in `block in _app_views_players_show_html_erb___4150599841541827568_70278258449920'
+app/views/players/show.html.erb:39:in `_app_views_players_show_html_erb___4150599841541827568_70278258449920'
+Started GET "/players/2" for ::1 at 2019-09-28 22:33:59 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:35: syntax error, unexpected ':'
+...scores.push("#{g.player_score : g.opponent_score}")
+...                              ^):
+  
+app/helpers/matches_helper.rb:35: syntax error, unexpected ':'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:34:18 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected end, expecting tSTRING_DEND
+        end
+        ^~~):
+  
+app/helpers/matches_helper.rb:36: syntax error, unexpected end, expecting tSTRING_DEND
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:35:31 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+...cores.push(g.player_score ":" g.opponent_score)
+...                              ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:35: syntax error, unexpected ')', expecting end
+...yer_score ":" g.opponent_score)
+...                              ^):
+  
+app/helpers/matches_helper.rb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/helpers/matches_helper.rb:35: syntax error, unexpected ')', expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:35:58 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+....push(g.player_score.to_s ":" g.opponent_score.to_s)
+...                              ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:35: syntax error, unexpected ')', expecting end
+...to_s ":" g.opponent_score.to_s)
+...                              ^):
+  
+app/helpers/matches_helper.rb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/helpers/matches_helper.rb:35: syntax error, unexpected ')', expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:36:18 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+....push(g.player_score.to_s ":" g.opponent_score.to_s)
+...                              ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+...to_s ":" g.opponent_score.to_s)
+...                              ^):
+  
+app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:36:23 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+....push(g.player_score.to_s ":" g.opponent_score.to_s)
+...                              ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+...to_s ":" g.opponent_score.to_s)
+...                              ^):
+  
+app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:36:40 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+....push(g.player_score.to_s ":" g.opponent_score.to_s)
+...                              ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+...to_s ":" g.opponent_score.to_s)
+...                              ^):
+  
+app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:36:56 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+....push(g.player_score.to_s ":" g.opponent_score.to_s)
+...                              ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+...to_s ":" g.opponent_score.to_s)
+...                              ^):
+  
+app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:36:58 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+....push(g.player_score.to_s ":" g.opponent_score.to_s)
+...                              ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+...to_s ":" g.opponent_score.to_s)
+...                              ^):
+  
+app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:39:26 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+....push(g.player_score.to_s ":" g.opponent_score.to_s)
+...                              ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+...to_s ":" g.opponent_score.to_s)
+...                              ^):
+  
+app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:40:27 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+....push(g.player_score.to_s ":" g.opponent_score.to_s)
+...                              ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+...to_s ":" g.opponent_score.to_s)
+...                              ^):
+  
+app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:41:40 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+....push(g.player_score.to_s ":" g.opponent_score.to_s)
+...                              ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+...to_s ":" g.opponent_score.to_s)
+...                              ^):
+  
+app/helpers/matches_helper.rb:36: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/helpers/matches_helper.rb:36: syntax error, unexpected ')', expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 22:42:51 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 1]]
+  ↳ app/helpers/matches_helper.rb:33
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 6]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 8]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 9]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/helpers/matches_helper.rb:35
+  Rendered players/show.html.erb within layouts/application (157045.8ms)
+Completed 200 OK in 157081ms (Views: 157064.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/matches/new" for ::1 at 2019-09-28 22:46:02 -0500
+Processing by MatchesController#new as HTML
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/helpers/matches_helper.rb:5
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/new.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 67ms (Views: 45.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/matches" for ::1 at 2019-09-28 22:46:32 -0500
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CU7n16dxX2cb8zShX2G+nTpDsVc4sL4uIrmvx1bOqAC/R/YGZMtw/eQmBq4kBknbdjEsfzhJ1TYDwV2BYKp6HQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"", "match_type"=>"5", "notes"=>"Add some details here. ", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"2"}, "1"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"3"}, "2"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"4", "opponent_score"=>"11"}, "3"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5"}, "4"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mMatch Create (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 1], ["opponent_id", 1], ["match_type", "5"], ["created_at", "2019-09-29 03:46:32.919869"], ["updated_at", "2019-09-29 03:46:32.919869"], ["notes", "Add some details here. "], ["date", ""]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.2ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["match_id", 11], ["player_score", 11], ["opponent_score", 2], ["created_at", "2019-09-29 03:46:32.921011"], ["updated_at", "2019-09-29 03:46:32.921011"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["match_id", 11], ["player_score", 11], ["opponent_score", 3], ["created_at", "2019-09-29 03:46:32.921893"], ["updated_at", "2019-09-29 03:46:32.921893"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["match_id", 11], ["player_score", 4], ["opponent_score", 11], ["created_at", "2019-09-29 03:46:32.922513"], ["updated_at", "2019-09-29 03:46:32.922513"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["match_id", 11], ["player_score", 11], ["opponent_score", 5], ["created_at", "2019-09-29 03:46:32.923098"], ["updated_at", "2019-09-29 03:46:32.923098"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+Redirected to http://localhost:3000/matches/11
+Completed 302 Found in 14ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/matches/11" for ::1 at 2019-09-28 22:46:32 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 11]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/players/1" for ::1 at 2019-09-28 22:46:40 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 2]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 3]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 4]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 11]]
+  ↳ app/helpers/matches_helper.rb:35
+  Rendered players/show.html.erb within layouts/application (10286.1ms)
+Completed 200 OK in 10307ms (Views: 10304.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/matches/new" for ::1 at 2019-09-28 22:49:09 -0500
+Processing by MatchesController#new as HTML
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/helpers/matches_helper.rb:5
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 62ms (Views: 41.8ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/matches" for ::1 at 2019-09-28 22:49:38 -0500
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Du+0PMNCn2bk00QIDMzkzSlolehPu9QSx9kRlEm7JOC45qXtAPiw/BsGdgd3qxOLZRoIwE9CvwrmoePSf9/2/Q==", "match"=>{"player_id"=>"2", "opponent_id"=>"1", "date"=>"2019-09-06", "match_type"=>"3", "notes"=>"This is best of 3", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4"}, "1"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"7", "opponent_score"=>"11"}, "2"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6"}, "3"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "4"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mMatch Create (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 2], ["opponent_id", 1], ["match_type", "3"], ["created_at", "2019-09-29 03:49:38.673718"], ["updated_at", "2019-09-29 03:49:38.673718"], ["notes", "This is best of 3"], ["date", "2019-09-06"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.2ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["match_id", 12], ["player_score", 11], ["opponent_score", 4], ["created_at", "2019-09-29 03:49:38.674944"], ["updated_at", "2019-09-29 03:49:38.674944"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["match_id", 12], ["player_score", 7], ["opponent_score", 11], ["created_at", "2019-09-29 03:49:38.675816"], ["updated_at", "2019-09-29 03:49:38.675816"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["match_id", 12], ["player_score", 11], ["opponent_score", 6], ["created_at", "2019-09-29 03:49:38.676609"], ["updated_at", "2019-09-29 03:49:38.676609"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+Redirected to http://localhost:3000/matches/12
+Completed 302 Found in 15ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/matches/12" for ::1 at 2019-09-28 22:49:38 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 12]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 22:49:41 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 1]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 6]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 8]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 9]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 12]]
+  ↳ app/helpers/matches_helper.rb:35
+  Rendered players/show.html.erb within layouts/application (12414.0ms)
+Completed 200 OK in 12433ms (Views: 12430.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/matches/new" for ::1 at 2019-09-28 22:50:38 -0500
+Processing by MatchesController#new as HTML
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/helpers/matches_helper.rb:5
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 65ms (Views: 43.5ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/matches" for ::1 at 2019-09-28 22:51:22 -0500
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"biZCeKEiXvuVUQAnlUXeD2E4XP0/xrUpCQ/zVRwzTTHYL1OpYphxYWqEMijuIilJLUrB1T8/3jEodwETKlefLA==", "match"=>{"player_id"=>"2", "opponent_id"=>"1", "date"=>"2019-09-04", "match_type"=>"5", "notes"=>"This is best of 5", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"14", "opponent_score"=>"12"}, "1"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"7"}, "2"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"16", "opponent_score"=>"14"}, "3"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "4"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mMatch Create (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 2], ["opponent_id", 1], ["match_type", "5"], ["created_at", "2019-09-29 03:51:22.287657"], ["updated_at", "2019-09-29 03:51:22.287657"], ["notes", "This is best of 5"], ["date", "2019-09-04"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["match_id", 13], ["player_score", 14], ["opponent_score", 12], ["created_at", "2019-09-29 03:51:22.288938"], ["updated_at", "2019-09-29 03:51:22.288938"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.2ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["match_id", 13], ["player_score", 11], ["opponent_score", 7], ["created_at", "2019-09-29 03:51:22.290255"], ["updated_at", "2019-09-29 03:51:22.290255"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mGame Create (0.1ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["match_id", 13], ["player_score", 16], ["opponent_score", 14], ["created_at", "2019-09-29 03:51:22.291293"], ["updated_at", "2019-09-29 03:51:22.291293"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+Redirected to http://localhost:3000/matches/13
+Completed 302 Found in 15ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/matches/13" for ::1 at 2019-09-28 22:51:22 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 13]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 22:51:29 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 1]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 6]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 8]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 9]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 12]]
+  ↳ app/helpers/matches_helper.rb:35
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 13]]
+  ↳ app/helpers/matches_helper.rb:35
+  Rendered players/show.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 73ms (Views: 56.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 22:52:48 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:39
+  Rendered players/show.html.erb within layouts/application (347.8ms)
+Completed 500 Internal Server Error in 362ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `m' for #<#<Class:0x00007fd5e3ef65a8>:0x00007fd5e3effa18>):
+    39:             <% @player.matches.each do |m| %>
+    40:             <tr>
+    41:                 <td><%= m.date %></td>
+    42:                 <td><%= match_status(m) %></td>
+    43:                 <td><%= m.opponent.username %></td>
+    44:                 <td><%= m.match_type %></td>
+    45:                 <td><%= match_scores(m) %></td>
+  
+app/helpers/matches_helper.rb:32:in `match_status'
+app/views/players/show.html.erb:42:in `block in _app_views_players_show_html_erb___4150599841541827568_70278314441200'
+app/views/players/show.html.erb:39:in `_app_views_players_show_html_erb___4150599841541827568_70278314441200'
+Started GET "/players/2" for ::1 at 2019-09-28 23:01:57 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 1]]
+  ↳ app/helpers/matches_helper.rb:34
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 6]]
+  ↳ app/helpers/matches_helper.rb:34
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/helpers/matches_helper.rb:34
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 8]]
+  ↳ app/helpers/matches_helper.rb:34
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 9]]
+  ↳ app/helpers/matches_helper.rb:34
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/helpers/matches_helper.rb:34
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 12]]
+  ↳ app/helpers/matches_helper.rb:34
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 13]]
+  ↳ app/helpers/matches_helper.rb:34
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  Rendered players/show.html.erb within layouts/application (88.2ms)
+Completed 200 OK in 125ms (Views: 55.2ms | ActiveRecord: 50.5ms)
+
+
+Started GET "/players/2" for ::1 at 2019-09-28 23:04:21 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:37: syntax error, unexpected tIDENTIFIER, expecting end
+...       "<span style="font_color: green;> Won </span>"
+...                     ^~~~~~~~~~
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:37: syntax error, unexpected '>', expecting end
+...span style="font_color: green;> Won </span>"
+...                              ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:48: unterminated regexp meets end of file
+# end
+     ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:48: syntax error, unexpected end-of-input, expecting end):
+  
+app/helpers/matches_helper.rb:37: syntax error, unexpected tIDENTIFIER, expecting end
+app/helpers/matches_helper.rb:37: syntax error, unexpected '>', expecting end
+app/helpers/matches_helper.rb:48: unterminated regexp meets end of file
+app/helpers/matches_helper.rb:48: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 23:05:42 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:37: syntax error, unexpected tIDENTIFIER, expecting end
+            "<span style="color: green;"> Won </span>"
+                          ^~~~~):
+  
+app/helpers/matches_helper.rb:37: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 23:06:48 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:37: syntax error, unexpected '<'
+            <span style="color: green;"> W...
+            ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:48: unterminated regexp meets end of file
+# end
+     ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:48: syntax error, unexpected end-of-input, expecting end):
+  
+app/helpers/matches_helper.rb:37: syntax error, unexpected '<'
+app/helpers/matches_helper.rb:48: unterminated regexp meets end of file
+app/helpers/matches_helper.rb:48: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 23:07:00 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:37: syntax error, unexpected '<'
+            <span style="color:green;"> Wo...
+            ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:48: unterminated regexp meets end of file
+# end
+     ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:48: syntax error, unexpected end-of-input, expecting end):
+  
+app/helpers/matches_helper.rb:37: syntax error, unexpected '<'
+app/helpers/matches_helper.rb:48: unterminated regexp meets end of file
+app/helpers/matches_helper.rb:48: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 23:07:37 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:37: syntax error, unexpected '<'
+            <p style="color:green;">Won</p>
+            ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:48: unterminated regexp meets end of file
+# end
+     ^
+/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:48: syntax error, unexpected end-of-input, expecting end):
+  
+app/helpers/matches_helper.rb:37: syntax error, unexpected '<'
+app/helpers/matches_helper.rb:48: unterminated regexp meets end of file
+app/helpers/matches_helper.rb:48: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 23:07:45 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/matches_helper.rb:37: syntax error, unexpected tIDENTIFIER, expecting end
+            "<p style="color:green;">Won</p>"
+                       ^~~~~):
+  
+app/helpers/matches_helper.rb:37: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/2" for ::1 at 2019-09-28 23:08:10 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:39
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 1]]
+  ↳ app/helpers/matches_helper.rb:28
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 6]]
+  ↳ app/helpers/matches_helper.rb:28
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 7]]
+  ↳ app/helpers/matches_helper.rb:28
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 8]]
+  ↳ app/helpers/matches_helper.rb:28
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 9]]
+  ↳ app/helpers/matches_helper.rb:28
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 10]]
+  ↳ app/helpers/matches_helper.rb:28
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 12]]
+  ↳ app/helpers/matches_helper.rb:28
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 13]]
+  ↳ app/helpers/matches_helper.rb:28
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:43
+  Rendered players/show.html.erb within layouts/application (73.1ms)
+Completed 200 OK in 102ms (Views: 87.1ms | ActiveRecord: 3.3ms)
+
+

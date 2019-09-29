@@ -1,5 +1,3 @@
-
-
 <div id="player_stats" style="border: solid black;">
 
     <p>Username: <%= @player.username %></p>
@@ -11,14 +9,18 @@
     <span>Wins: <%= @player.wins %> |</span>
     <span>Losses: <%= @player.losses %></span>
     <br>
-    <%= link_to "Update Player", edit_player_path(@player) %>
+    <%= button_to "Update Player", edit_player_path(@player), method: :get %>
+    <br>
+
 </div>
 <br>
 
-<%= link_to "Add Match", new_match_path %>
-<br>
 
 <div id="player_matches" style="border: solid black;">
+    
+    <br>
+    <%= button_to "Add Match", new_match_path, method: :get %>
+    <br>
     <table>
         <thead>
             <tr>
