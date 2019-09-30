@@ -10,7 +10,7 @@ class Match < ApplicationRecord
             #Second attempt:
             game = Game.find_or_create_by(game_attributes) unless game_attributes[:player_score].blank? || game_attributes[:opponent_score].blank?
             # binding.pry
-            self.games << game
+            # self.games << game
 
             #First attempt:
             # self.games.build(game_attributes) unless game_attributes[:player_score].blank? || game_attributes[:opponent_score].blank?

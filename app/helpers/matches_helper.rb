@@ -1,6 +1,5 @@
 module MatchesHelper
-    
-    
+        
     def player_id_field(match)
         if match.player.nil?
             select_tag "match[player_id]", options_from_collection_for_select(Player.all, :id, :username, match.player_id) 
