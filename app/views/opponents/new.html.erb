@@ -1,0 +1,15 @@
+<h1>Create an Opponent</h1>
+
+<%= form_with model: @opponent do |f| %>
+    <%= f.label :username %><br>
+    <%= f.text_field :username %><br>
+
+    <%= f.label :gender, "Gender:" %><br>
+    <%= f.label :Male %>
+    <%= radio_button_tag(:gender, "Male") %>
+    <%= f.label :Female %>
+    <%= radio_button_tag(:gender, "Female") %><br>
+
+    <%= f.submit %>
+
+<% end %>

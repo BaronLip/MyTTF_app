@@ -26,7 +26,7 @@ module MatchesHelper
         player_wins = 0
         opponent_wins = 0
         match.games.each do |g|
-            if g.player_score > g.opponent_score
+            if g.player_score.to_i > g.opponent_score.to_i
                 player_wins += 1
             else
                 opponent_wins += 1

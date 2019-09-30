@@ -1,5 +1,5 @@
 class MatchesController < ApplicationController
-    # (Not used cause of nested routes.) before_action :find_match, only:[:show, :edit, :update, :destroy]
+    # (Not used cause of nested routes.) before_action :find_match, only:[:show, :update, :destroy]
     
     def show
         if params[:player_id]
@@ -14,23 +14,22 @@ class MatchesController < ApplicationController
         if params[:player_id] && !Player.exists?(params[:player_id])
             redirect_to players_path, alert: "Player not found."
         else
-            @match = Match.new(player_id: params[:player_id])
-            # if using static number of game fields:
-            
-            @match.games.build(player_id: params[:player_id])
-            @match.games.build(player_id: params[:player_id])
-            @match.games.build(player_id: params[:player_id])
-            @match.games.build(player_id: params[:player_id])
-            @match.games.build(player_id: params[:player_id])
-            @match.games.build(player_id: params[:player_id])
-            @match.games.build(player_id: params[:player_id])
+            @match = Match.new(player_id: params[:format])
+
+            # Using static number of game fields:
+            @match.games.build(player_id: @match.player_id)
+            @match.games.build(player_id: @match.player_id)
+            @match.games.build(player_id: @match.player_id)
+            @match.games.build(player_id: @match.player_id)
+            @match.games.build(player_id: @match.player_id)
+            @match.games.build(player_id: @match.player_id)
+            @match.games.build(player_id: @match.player_id)
         end
     end
 
     def create
-        # raise params.inspect
         @match = Match.new(match_params)
-        # binding.pry
+    
         if @match.save
             redirect_to match_path(@match)
         else
@@ -40,17 +39,25 @@ class MatchesController < ApplicationController
     end
 
     def edit
-                
+        if params[:player_id] && !Player.exists?(params[:player_id])
+            redirect_to players_path, alert: "Player not found."
+        else
+            find_match
+        end   
     end
-
+    
     def update
-
+        # binding.pry
+        find_match
+        @match.update(match_params)
+        redirect_to match_path(@match)
     end
 
-    # def destroy
-    #     @match.destroy
-    #     redirect_to player_path(@match.player_id)
-    # end
+    def destroy
+        find_match
+        @match.destroy
+        redirect_to player_path(@match.player)
+    end
 
     private
 
@@ -62,17 +69,18 @@ class MatchesController < ApplicationController
         :player_id, 
         :opponent_id,
             games_attributes: [
+                :id,
                 :match_id,
                 :player_id,
                 :player_score,
                 :opponent_id,
                 :opponent_score,
-                :address_type]
+            ]
         )
     end
 
     def find_match
-        @match = Match.find_by(:id => params[:match_id])
+        @match = Match.find_by(:id => params[:id])
     end
 
 end
