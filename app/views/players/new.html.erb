@@ -2,8 +2,8 @@
     <h1>Signup</h1>
 </div>
 
-<div class="errors">
-    <p><%= flash[:errors] %></p>
-</div>
+<% if flash[:errors] %>
+    <%= render '/applications/errors' %>
+<% end %>
 
 <%= render 'player_form' %>

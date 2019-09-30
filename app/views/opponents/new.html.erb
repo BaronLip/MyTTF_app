@@ -1,15 +1,20 @@
 <h1>Create an Opponent</h1>
 
+<% if flash[:errors] %>
+    <%= render '/applications/errors' %>
+<% end %>
+
 <%= form_with model: @opponent do |f| %>
     <%= f.label :username %><br>
     <%= f.text_field :username %><br>
 
     <%= f.label :gender, "Gender:" %><br>
     <%= f.label :Male %>
-    <%= radio_button_tag(:gender, "Male") %>
+    <%= radio_button_tag("opponent[gender]", "Male") %>
     <%= f.label :Female %>
-    <%= radio_button_tag(:gender, "Female") %><br>
+    <%= radio_button_tag("opponent[gender]", "Female") %><br>
 
     <%= f.submit %>
-
 <% end %>
+
+<%= button_to "Cancel", player_path(current_player), method: :get %>

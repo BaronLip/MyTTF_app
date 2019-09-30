@@ -8,10 +8,10 @@ class OpponentsController < ApplicationController
         @opponent = Opponent.new(opponent_params)
 
         if @opponent.save
-            redirect_to player_path(@player)
+            redirect_to player_path(current_player)
         else
-            flash.now[:errors][:full_messages]
-            render "new"
+            flash[:errors] = @opponent.errors.full_messages.join(", ")
+            redirect_to new_opponent_path
         end
     end
 

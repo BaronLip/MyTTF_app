@@ -33,7 +33,7 @@ class MatchesController < ApplicationController
         if @match.save
             redirect_to match_path(@match)
         else
-            flash[:errors] = @match.errors.full_messages
+            flash[:errors] = @match.errors.full_messages.join(", ")
             render 'new'
         end
     end

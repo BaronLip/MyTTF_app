@@ -16,7 +16,8 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-        session[:player_id] = nil
+        # session[:player_id] = nil
+        session.delete :player_id
         redirect_to root_url, notice: "Logged out!"
     end
 end
