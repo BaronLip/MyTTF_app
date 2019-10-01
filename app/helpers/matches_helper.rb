@@ -38,10 +38,53 @@ module MatchesHelper
             "Lost"
         end
     end
+
+    def win_percentage(player)
+        if player.matches.count == nil
+            "No matches yet. Get started!"
+        else
+            (match_wins(player).to_f / player.matches.count.to_f).round(2)
+        end
+    end
+
+    def match_wins(player)
+        @match_wins = 0
+        @match_losses = 0
+        player.matches.each do |m|
+            game_wins(m)
+            if @game_wins > @game_losses
+                @match_wins += 1
+            else
+                @match_losses += 1
+            end
+        end
+        @match_wins
+    end
+
+    def match_losses(player)
+        @match_wins = 0
+        @match_losses = 0
+        player.matches.each do |m|
+            game_wins(m)
+            if @game_wins > @game_losses
+                @match_wins += 1
+            else
+                @match_losses += 1
+            end
+        end
+        @match_losses
+    end
+
+    def game_wins(match)
+        @game_wins = 0
+        @game_losses = 0
+        match.games.each do |g|
+            if g.player_score > g.opponent_score
+                @game_wins += 1
+            else
+                @game_losses += 1   
+            end
+        end
+    end
     
 end
-
-# def game_score
-#     # self.player_score.to_s + ":" + self.opponent_score.to_s
-#     "#{self.player_score} : #{self.opponent_score}"
-# end

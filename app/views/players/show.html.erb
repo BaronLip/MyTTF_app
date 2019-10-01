@@ -6,8 +6,8 @@
     
     <p>Percentage Wins: <%= win_percentage(@player) %></p>
 
-    <span>Wins: <%= @player.wins %> |</span>
-    <span>Losses: <%= @player.losses %></span>
+    <span>Match Wins: <%= match_wins(@player) %> |</span>
+    <span>Losses: <%= match_losses(@player) %></span>
     <br>
     <%= button_to "Update Player", edit_player_path(@player), method: :get %>
     <br>

@@ -50,7 +50,7 @@ class MatchesController < ApplicationController
     def update
         #before_action
         @match.update(only_match_params)
-        
+        #Lines 54-77 is one big work around but it works well.
         @games = @match.games
         @games.each do |g|
             match_params[:games_attributes].each do |ga|
