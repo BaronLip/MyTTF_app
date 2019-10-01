@@ -16916,3 +16916,1828 @@ Processing by PlayersController#show as HTML
 Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/players/1" for ::1 at 2019-10-01 11:49:43 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (62.6ms)
+Completed 200 OK in 313ms (Views: 287.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/matches/new.1" for ::1 at 2019-10-01 11:49:56 -0500
+Processing by MatchesController#new as 
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (208.7ms)
+  Rendered matches/new.html.erb within layouts/application (215.4ms)
+Completed 200 OK in 244ms (Views: 235.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 11:51:06 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 11:51:08 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:14
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/helpers/matches_helper.rb:5
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (7.7ms)
+  Rendered matches/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 30ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 11:56:30 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  Rendered players/show.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"matches", :id=>"1"}, missing required keys: [:player_id]):
+    21:     <br>
+    22:     <%= button_to "Add Opponent", new_opponent_path, method: :get %>
+    23:     <br>
+    24:     <%= button_to "Add Match", new_player_match_path, method: :get %>
+    25:     <br>
+    26:     <table>
+    27:         <thead>
+  
+app/views/players/show.html.erb:24:in `_app_views_players_show_html_erb___2152047814613542392_70107237898260'
+Started GET "/players/1" for ::1 at 2019-10-01 11:56:40 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 11:56:42 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:14
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/helpers/matches_helper.rb:5
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (9.9ms)
+  Rendered matches/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 40ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 11:57:22 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:15
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/helpers/matches_helper.rb:5
+  [1m[36mOpponent Load (0.4ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (24.2ms)
+  Rendered matches/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 36607ms (Views: 41.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 11:58:03 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:15
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (26.9ms)
+  Rendered matches/new.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 3366ms (Views: 44.8ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/matches" for ::1 at 2019-10-01 12:02:02 -0500
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"snGafGyOybowVC/JTZwPPXTa8q2fvzNCXHSHKo+DkL0EeIutrzTmIM+BHcY2+/h7OKhvhZ9GWFp9DHVsuedCoA==", "match"=>{"player_id"=>"1", "opponent_id"=>"2", "date"=>"2019-10-01", "match_type"=>"1", "notes"=>"Just one game.", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"9"}, "1"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "2"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "3"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "4"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."match_id" = ? AND "games"."player_id" = ? AND "games"."player_score" = ? AND "games"."opponent_id" = ? AND "games"."opponent_score" = ? LIMIT ?[0m  [["match_id", nil], ["player_id", 1], ["player_score", 11], ["opponent_id", nil], ["opponent_score", 9], ["LIMIT", 1]]
+  ↳ app/models/match.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/match.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/match.rb:11
+Completed 500 Internal Server Error in 231712ms (ActiveRecord: 1.1ms)
+
+
+  
+NameError (undefined local variable or method `match_id' for #<MatchesController:0x00007f863a37edb8>
+Did you mean?  match_url):
+  
+app/controllers/matches_controller.rb:33:in `create'
+Started POST "/matches" for ::1 at 2019-10-01 12:06:22 -0500
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"snGafGyOybowVC/JTZwPPXTa8q2fvzNCXHSHKo+DkL0EeIutrzTmIM+BHcY2+/h7OKhvhZ9GWFp9DHVsuedCoA==", "match"=>{"player_id"=>"1", "opponent_id"=>"2", "date"=>"2019-10-01", "match_type"=>"1", "notes"=>"Just one game.", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"9"}, "1"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "2"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "3"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "4"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."match_id" = ? AND "games"."player_id" = ? AND "games"."player_score" = ? AND "games"."opponent_id" = ? AND "games"."opponent_score" = ? LIMIT ?[0m  [["match_id", nil], ["player_id", 1], ["player_score", 11], ["opponent_id", nil], ["opponent_score", 9], ["LIMIT", 1]]
+  ↳ app/models/match.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/match.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/match.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mMatch Create (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 1], ["opponent_id", 2], ["match_type", "1"], ["created_at", "2019-10-01 17:06:23.013107"], ["updated_at", "2019-10-01 17:06:23.013107"], ["notes", "Just one game."], ["date", "2019-10-01"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+Redirected to http://localhost:3000/matches/17
+Completed 302 Found in 69ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/matches/17" for ::1 at 2019-10-01 12:06:23 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/matches" for ::1 at 2019-10-01 12:06:32 -0500
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"snGafGyOybowVC/JTZwPPXTa8q2fvzNCXHSHKo+DkL0EeIutrzTmIM+BHcY2+/h7OKhvhZ9GWFp9DHVsuedCoA==", "match"=>{"player_id"=>"1", "opponent_id"=>"2", "date"=>"2019-10-01", "match_type"=>"1", "notes"=>"Just one game.", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"9"}, "1"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "2"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "3"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "4"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"1", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."match_id" = ? AND "games"."player_id" = ? AND "games"."player_score" = ? AND "games"."opponent_id" = ? AND "games"."opponent_score" = ? LIMIT ?[0m  [["match_id", nil], ["player_id", 1], ["player_score", 11], ["opponent_id", nil], ["opponent_score", 9], ["LIMIT", 1]]
+  ↳ app/models/match.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/match.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/match.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[36mMatch Create (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 1], ["opponent_id", 2], ["match_type", "1"], ["created_at", "2019-10-01 17:06:32.686436"], ["updated_at", "2019-10-01 17:06:32.686436"], ["notes", "Just one game."], ["date", "2019-10-01"]]
+  ↳ app/controllers/matches_controller.rb:34
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:34
+Redirected to http://localhost:3000/matches/18
+Completed 302 Found in 13ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/matches/18" for ::1 at 2019-10-01 12:06:32 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 12:09:06 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:14
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (8.4ms)
+  Rendered matches/new.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"players", :id=>nil}, missing required keys: [:id]):
+    4: 
+    5: <%= render 'matches_form' %>
+    6: 
+    7: <%= button_to "Back to Player", player_path(@player), method: :get %>
+  
+app/views/matches/new.html.erb:7:in `_app_views_matches_new_html_erb__852022101158787052_70107179472160'
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 12:10:36 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:14
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (6.8ms)
+  Rendered matches/new.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"matches", :player_id=>nil}, missing required keys: [:player_id]):
+    4: 
+    5: <%= render 'matches_form' %>
+    6: 
+    7: <%= button_to "Back to Player", new_player_match_path(@player), method: :get %>
+  
+app/views/matches/new.html.erb:7:in `_app_views_matches_new_html_erb__852022101158787052_70107237895080'
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 12:12:34 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:16
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (30.4ms)
+  Rendered matches/new.html.erb within layouts/application (32.2ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"matches", :player_id=>nil}, missing required keys: [:player_id]):
+    4: 
+    5: <%= render 'matches_form' %>
+    6: 
+    7: <%= button_to "Back to Player", new_player_match_path(@match), method: :get %>
+  
+app/views/matches/new.html.erb:7:in `_app_views_matches_new_html_erb__852022101158787052_70107237960160'
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 12:12:46 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:16
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (14.6ms)
+  Rendered matches/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 81ms (Views: 75.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 12:13:05 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:16
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (7.7ms)
+  Rendered matches/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 12:13:08 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:16
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (7.0ms)
+  Rendered matches/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 12:13:10 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:16
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (7.3ms)
+  Rendered matches/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 12:13:12 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:16
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (7.0ms)
+  Rendered matches/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 12:13:55 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:16
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (6.8ms)
+  Rendered matches/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 12:13:56 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/opponents/new" for ::1 at 2019-10-01 12:15:03 -0500
+Processing by OpponentsController#new as HTML
+  Rendering opponents/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered opponents/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 38ms (Views: 28.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 12:15:12 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 47ms (Views: 43.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/players/1/matches/new" for ::1 at 2019-10-01 12:16:01 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"1"}
+  [1m[36mPlayer Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:14
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (8.4ms)
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered matches/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 12:16:03 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/matches/16/edit" for ::1 at 2019-10-01 12:20:28 -0500
+Processing by MatchesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:84
+  Rendering matches/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/_matches_form.html.erb:33
+  Rendered matches/_matches_form.html.erb (8.6ms)
+  Rendered matches/edit.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/matches/16" for ::1 at 2019-10-01 12:26:44 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:84
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:52
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:26:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? AND "games"."match_id" = ? AND "games"."player_id" = ? AND "games"."player_score" = ? AND "games"."opponent_id" = ? AND "games"."opponent_score" = ? LIMIT ?[0m  [["id", 48], ["match_id", 16], ["player_id", 2], ["player_score", 11], ["opponent_id", nil], ["opponent_score", 6], ["LIMIT", 1]]
+  ↳ app/models/match.rb:11
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/models/match.rb:11
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("id", "match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id", 48], ["match_id", 16], ["player_id", 2], ["player_score", 11], ["opponent_score", 6], ["created_at", "2019-10-01 18:32:52.452018"], ["updated_at", "2019-10-01 18:32:52.452018"]]
+  ↳ app/models/match.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+Completed 500 Internal Server Error in 3967718ms (ActiveRecord: 2.1ms)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: games.id: INSERT INTO "games" ("id", "match_id", "player_id", "player_score", "opponent_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)):
+  
+app/models/match.rb:11:in `block in games_attributes='
+app/models/match.rb:8:in `each'
+app/models/match.rb:8:in `games_attributes='
+app/controllers/matches_controller.rb:53:in `update'
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/controllers/matches_controller.rb:119: syntax error, unexpected =>, expecting end-of-input
+=> <ActionController::Parameter...
+^~):
+  
+app/controllers/matches_controller.rb:119: syntax error, unexpected =>, expecting end-of-input
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:33:22 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:110
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mMatch Update (0.3ms)[0m  [1m[33mUPDATE "matches" SET "notes" = ?, "date" = ?, "opponent_id" = ?, "updated_at" = ? WHERE "matches"."id" = ?[0m  [["notes", "Removed games, Hoping for update."], ["date", "2019-10-01"], ["opponent_id", 1], ["updated_at", "2019-10-01 18:33:22.884368"], ["id", 16]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 4.5ms)
+
+
+  
+NoMethodError (undefined method `games_attributes' for #<ActionController::Parameters:0x00007f863949dd30>):
+  
+app/controllers/matches_controller.rb:57:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:33:42 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:110
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 2.0ms)
+
+
+  
+NoMethodError (undefined method `id' for #<Array:0x00007f863b8818f0>):
+  
+app/controllers/matches_controller.rb:58:in `block (2 levels) in update'
+app/controllers/matches_controller.rb:57:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:34:11 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:110
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/matches_controller.rb:57:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PUT "/__web_console/repl_sessions/96389ec58c8948b74abd679401bf7b78" for ::1 at 2019-10-01 13:34:37 -0500
+Started PUT "/__web_console/repl_sessions/96389ec58c8948b74abd679401bf7b78" for ::1 at 2019-10-01 13:34:38 -0500
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:35:17 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:110
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/matches_controller.rb:57:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:36:48 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:112
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/matches_controller.rb:58:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:37:01 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:112
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/matches_controller.rb:58:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:37:09 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:112
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 2.2ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/matches_controller.rb:58:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PUT "/__web_console/repl_sessions/01bd6aeae423be526bc603bb0b4e4ed5" for ::1 at 2019-10-01 13:37:40 -0500
+Started PUT "/__web_console/repl_sessions/01bd6aeae423be526bc603bb0b4e4ed5" for ::1 at 2019-10-01 13:37:41 -0500
+Started PUT "/__web_console/repl_sessions/01bd6aeae423be526bc603bb0b4e4ed5" for ::1 at 2019-10-01 13:37:47 -0500
+Started PUT "/__web_console/repl_sessions/01bd6aeae423be526bc603bb0b4e4ed5" for ::1 at 2019-10-01 13:37:52 -0500
+Started PUT "/__web_console/repl_sessions/01bd6aeae423be526bc603bb0b4e4ed5" for ::1 at 2019-10-01 13:38:05 -0500
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:38:28 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:112
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `id' for ["id", "48"]:Array):
+  
+app/controllers/matches_controller.rb:60:in `block (2 levels) in update'
+app/controllers/matches_controller.rb:58:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PUT "/__web_console/repl_sessions/e4f1722797ab871cba4c7bdb139ea805" for ::1 at 2019-10-01 13:40:11 -0500
+Started PUT "/__web_console/repl_sessions/e4f1722797ab871cba4c7bdb139ea805" for ::1 at 2019-10-01 13:40:12 -0500
+Started PUT "/__web_console/repl_sessions/e4f1722797ab871cba4c7bdb139ea805" for ::1 at 2019-10-01 13:40:17 -0500
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:42:24 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:112
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `id' for #<Array:0x00007f863a32dda0>):
+  
+app/controllers/matches_controller.rb:60:in `block (2 levels) in update'
+app/controllers/matches_controller.rb:58:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:43:55 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:112
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 2.2ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/matches_controller.rb:59:in `block (2 levels) in update'
+app/controllers/matches_controller.rb:58:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PUT "/__web_console/repl_sessions/c39c6eaf34ae0504c695a2bf7f5d4b49" for ::1 at 2019-10-01 13:44:10 -0500
+Started PATCH "/matches/16" for ::1 at 2019-10-01 13:44:23 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:112
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 2.3ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/matches_controller.rb:59:in `block (2 levels) in update'
+app/controllers/matches_controller.rb:58:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:44:27 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:44:33 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:44:33 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:44:39 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:44:43 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:44:43 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:44:52 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:44:58 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:44:58 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:45:01 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:45:06 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:45:06 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:45:13 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:45:25 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:45:25 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:45:33 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:45:42 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:45:52 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:46:04 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:46:19 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:47:28 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:47:29 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:47:56 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:47:57 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:48:03 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:48:05 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:48:12 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:48:12 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:48:18 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:48:19 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:48:23 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:48:39 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:48:40 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:48:51 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:49:01 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:49:05 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:49:10 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:49:15 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:49:17 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:49:28 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:50:24 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:50:48 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:50:51 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:58:39 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:58:59 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:59:18 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:59:35 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:59:37 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 13:59:43 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:00:02 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:00:04 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:00:14 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:00:14 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:00:29 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:00:33 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:00:33 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:00:46 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:00:52 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:01:21 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:01:23 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:01:27 -0500
+Started PUT "/__web_console/repl_sessions/5e39b2b692b0c122b3cd21de78a4197f" for ::1 at 2019-10-01 14:01:54 -0500
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:02:23 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:112
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 2.4ms)
+
+
+  
+NoMethodError (undefined method `id' for ["id", "48"]:Array):
+  
+app/controllers/matches_controller.rb:59:in `block (2 levels) in update'
+app/controllers/matches_controller.rb:58:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PUT "/__web_console/repl_sessions/9f929176d1d2ae6c0f59f9452961fdf7" for ::1 at 2019-10-01 14:02:35 -0500
+Started PUT "/__web_console/repl_sessions/9f929176d1d2ae6c0f59f9452961fdf7" for ::1 at 2019-10-01 14:02:50 -0500
+Started PUT "/__web_console/repl_sessions/9f929176d1d2ae6c0f59f9452961fdf7" for ::1 at 2019-10-01 14:02:53 -0500
+Started PUT "/__web_console/repl_sessions/9f929176d1d2ae6c0f59f9452961fdf7" for ::1 at 2019-10-01 14:03:04 -0500
+Started PUT "/__web_console/repl_sessions/9f929176d1d2ae6c0f59f9452961fdf7" for ::1 at 2019-10-01 14:03:08 -0500
+Started PUT "/__web_console/repl_sessions/9f929176d1d2ae6c0f59f9452961fdf7" for ::1 at 2019-10-01 14:03:12 -0500
+Started PUT "/__web_console/repl_sessions/9f929176d1d2ae6c0f59f9452961fdf7" for ::1 at 2019-10-01 14:04:33 -0500
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:04:36 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:112
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 2.2ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/matches_controller.rb:59:in `block (2 levels) in update'
+app/controllers/matches_controller.rb:58:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PUT "/__web_console/repl_sessions/02c9a8cecfd73b2974249f7f5b7d35d7" for ::1 at 2019-10-01 14:04:39 -0500
+Started PUT "/__web_console/repl_sessions/02c9a8cecfd73b2974249f7f5b7d35d7" for ::1 at 2019-10-01 14:05:30 -0500
+Started PUT "/__web_console/repl_sessions/02c9a8cecfd73b2974249f7f5b7d35d7" for ::1 at 2019-10-01 14:05:32 -0500
+Started PUT "/__web_console/repl_sessions/02c9a8cecfd73b2974249f7f5b7d35d7" for ::1 at 2019-10-01 14:05:42 -0500
+Started PUT "/__web_console/repl_sessions/02c9a8cecfd73b2974249f7f5b7d35d7" for ::1 at 2019-10-01 14:05:42 -0500
+Started PUT "/__web_console/repl_sessions/02c9a8cecfd73b2974249f7f5b7d35d7" for ::1 at 2019-10-01 14:05:45 -0500
+Started PUT "/__web_console/repl_sessions/02c9a8cecfd73b2974249f7f5b7d35d7" for ::1 at 2019-10-01 14:05:46 -0500
+Started PUT "/__web_console/repl_sessions/02c9a8cecfd73b2974249f7f5b7d35d7" for ::1 at 2019-10-01 14:06:03 -0500
+Started PUT "/__web_console/repl_sessions/02c9a8cecfd73b2974249f7f5b7d35d7" for ::1 at 2019-10-01 14:22:33 -0500
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:22:57 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IPAqpUSyAyTxsqfKA+3QTRf6LKsPSN5PG/9dxc9Cu1iW+Tt0hwgsvg5nlcV4iicLW4ixgw+xtVc6h6+D+SZpRQ==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-01", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>"", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:112
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Redirected to http://localhost:3000/matches/16
+Completed 302 Found in 61ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/matches/16" for ::1 at 2019-10-01 14:22:57 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 96ms (Views: 93.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 14:23:14 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/matches/16/edit" for ::1 at 2019-10-01 14:23:21 -0500
+Processing by MatchesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:112
+  Rendering matches/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/_matches_form.html.erb:33
+  Rendered matches/_matches_form.html.erb (8.0ms)
+  Rendered matches/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:25:20 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u/tUmP9EUdkXnVxdIhN4OcyyoVJsbz93MDARDcF3vqkN8kVJPP5+Q+hIblJZdI9/gMA8emyWVG8RSONL9xNstA==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:111
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mMatch Update (0.3ms)[0m  [1m[33mUPDATE "matches" SET "date" = ?, "updated_at" = ? WHERE "matches"."id" = ?[0m  [["date", ""], ["updated_at", "2019-10-01 19:25:20.752785"], ["id", 16]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 80440ms (ActiveRecord: 3.2ms)
+
+
+  
+SystemExit (exit):
+  
+app/controllers/matches_controller.rb:58:in `block (2 levels) in update'
+app/controllers/matches_controller.rb:57:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:27:14 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u/tUmP9EUdkXnVxdIhN4OcyyoVJsbz93MDARDcF3vqkN8kVJPP5+Q+hIblJZdI9/gMA8emyWVG8RSONL9xNstA==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:111
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 291099ms (ActiveRecord: 2.4ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/matches_controller.rb:59:in `[]'
+app/controllers/matches_controller.rb:59:in `block (2 levels) in update'
+app/controllers/matches_controller.rb:57:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:32:09 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u/tUmP9EUdkXnVxdIhN4OcyyoVJsbz93MDARDcF3vqkN8kVJPP5+Q+hIblJZdI9/gMA8emyWVG8RSONL9xNstA==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:111
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Completed 500 Internal Server Error in 7893ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `to_1' for "48":String
+Did you mean?  to_d
+               to_r
+               to_f
+               to_i
+               to_s
+               to_c):
+  
+app/controllers/matches_controller.rb:59:in `block (2 levels) in update'
+app/controllers/matches_controller.rb:57:in `block in update'
+app/controllers/matches_controller.rb:56:in `update'
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:32:26 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u/tUmP9EUdkXnVxdIhN4OcyyoVJsbz93MDARDcF3vqkN8kVJPP5+Q+hIblJZdI9/gMA8emyWVG8RSONL9xNstA==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:111
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+Started GET "/matches/16" for ::1 at 2019-10-01 14:32:57 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/baronlip/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (50.3ms)
+Completed 200 OK in 277ms (Views: 257.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 14:33:06 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/matches/16/edit" for ::1 at 2019-10-01 14:33:10 -0500
+Processing by MatchesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:111
+  Rendering matches/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/_matches_form.html.erb:33
+  Rendered matches/_matches_form.html.erb (238.6ms)
+  Rendered matches/edit.html.erb within layouts/application (239.5ms)
+Completed 200 OK in 257ms (Views: 254.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:33:35 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1MrVc2FB5DM6S2eXomFYXtOtS9hOfBbS4y1LbyRY53hWjqEDj8oCjM8H5El7nInNzwoB2HAm0Nq9EdrivWxgA==", "match"=>{"player_id"=>"1", "opponent_id"=>"2", "date"=>"2019-10-05", "match_type"=>"5", "notes"=>"Removed games, Hoping for update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"5", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"4", "id"=>"50"}, "3"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"51"}, "4"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"52"}, "5"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"53"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:111
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mMatch Update (0.4ms)[0m  [1m[33mUPDATE "matches" SET "date" = ?, "opponent_id" = ?, "updated_at" = ? WHERE "matches"."id" = ?[0m  [["date", "2019-10-05"], ["opponent_id", 2], ["updated_at", "2019-10-01 19:33:35.758858"], ["id", 16]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:56
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[36mGame Destroy (0.4ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 51]]
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[36mGame Destroy (0.3ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 52]]
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[36mGame Destroy (0.2ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 53]]
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:68
+Redirected to http://localhost:3000/matches/16
+Completed 302 Found in 56ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/matches/16" for ::1 at 2019-10-01 14:33:35 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 14:34:00 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/matches/14/edit" for ::1 at 2019-10-01 14:34:10 -0500
+Processing by MatchesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:111
+  Rendering matches/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/views/matches/_matches_form.html.erb:33
+  Rendered matches/_matches_form.html.erb (7.2ms)
+  Rendered matches/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/matches/14" for ::1 at 2019-10-01 14:34:34 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JLZCGJEzvE9dOI3/OF6k3s4DKFLycxXCz5F+XZDrRGGSv1PJUomT1aLtv/BDOVOYgnG1evKKftru6Ywbpo+WfA==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-05", "match_type"=>"3", "notes"=>"Removing extra games. ", "games_attributes"=>{"0"=>{"match_id"=>"14", "player_id"=>"", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"8", "id"=>"44"}, "1"=>{"match_id"=>"14", "player_id"=>"", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6", "id"=>"45"}, "2"=>{"match_id"=>"14", "player_id"=>"", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"81"}, "3"=>{"match_id"=>"14", "player_id"=>"", "opponent_id"=>"", "player_score"=>"0", "opponent_score"=>"0", "id"=>"82"}}}, "commit"=>"Update Match", "id"=>"14"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:111
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mMatch Update (0.4ms)[0m  [1m[33mUPDATE "matches" SET "notes" = ?, "date" = ?, "updated_at" = ? WHERE "matches"."id" = ?[0m  [["notes", "Removing extra games. "], ["date", "2019-10-05"], ["updated_at", "2019-10-01 19:34:34.646287"], ["id", 14]]
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/controllers/matches_controller.rb:56
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[36mGame Destroy (0.3ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 81]]
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[36mGame Destroy (0.2ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 82]]
+  ↳ app/controllers/matches_controller.rb:68
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:68
+Redirected to http://localhost:3000/matches/14
+Completed 302 Found in 15ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/matches/14" for ::1 at 2019-10-01 14:34:34 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 14:34:36 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/matches/16/edit" for ::1 at 2019-10-01 14:34:41 -0500
+Processing by MatchesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:111
+  Rendering matches/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/_matches_form.html.erb:33
+  Rendered matches/_matches_form.html.erb (6.1ms)
+  Rendered matches/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:36:02 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mKfR3tu+3zR8dad34paljJugi1MP9H9CCnN6fbXOne8ursAPGATwroOglXiZ8VLK19IWew8NFForC4g7g6pP8g==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-05", "match_type"=>"5", "notes"=>"testing for score update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"1", "opponent_score"=>"1", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"1", "opponent_score"=>"1", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"1", "opponent_score"=>"1", "id"=>"50"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:109
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mMatch Update (0.3ms)[0m  [1m[33mUPDATE "matches" SET "notes" = ?, "opponent_id" = ?, "updated_at" = ? WHERE "matches"."id" = ?[0m  [["notes", "testing for score update."], ["opponent_id", 1], ["updated_at", "2019-10-01 19:36:02.090881"], ["id", 16]]
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:55
+Redirected to http://localhost:3000/matches/16
+Completed 302 Found in 50ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/matches/16" for ::1 at 2019-10-01 14:36:02 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 14:36:07 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/matches/16/edit" for ::1 at 2019-10-01 14:36:14 -0500
+Processing by MatchesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:109
+  Rendering matches/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/_matches_form.html.erb:33
+  Rendered matches/_matches_form.html.erb (6.3ms)
+  Rendered matches/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:37:20 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TpK4hCPLVwaJsniPc3jKumxqsC4Ym/rufpLqV3wlSGn4m6lV4HF4nHZnSoAIHz38IBgtBhhikfZf6hgRSkGadA==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"", "match_type"=>"5", "notes"=>"testing for score update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"9", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"8", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"7", "id"=>"50"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:109
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mOpponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mMatch Update (0.3ms)[0m  [1m[33mUPDATE "matches" SET "date" = ?, "updated_at" = ? WHERE "matches"."id" = ?[0m  [["date", ""], ["updated_at", "2019-10-01 19:37:20.058746"], ["id", 16]]
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:55
+Redirected to http://localhost:3000/matches/16
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/matches/16" for ::1 at 2019-10-01 14:37:20 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 14:37:22 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/matches/16/edit" for ::1 at 2019-10-01 14:37:25 -0500
+Processing by MatchesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:109
+  Rendering matches/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/_matches_form.html.erb:33
+  Rendered matches/_matches_form.html.erb (6.3ms)
+  Rendered matches/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:40:10 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IQhknAqnF9FKNkw37YOy8Cf8DZZYlvNBeiuBGbO/iHuXAXVNyR04S7XjfjiW5EW2a46QvlhvmFlbU3NfhdtaZg==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-05", "match_type"=>"5", "notes"=>"Testing for score update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"3", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"2", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"9", "id"=>"50"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:110
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mMatch Update (0.3ms)[0m  [1m[33mUPDATE "matches" SET "notes" = ?, "date" = ?, "updated_at" = ? WHERE "matches"."id" = ?[0m  [["notes", "Testing for score update."], ["date", "2019-10-05"], ["updated_at", "2019-10-01 19:40:10.640200"], ["id", 16]]
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:55
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[36mGame Update (0.3ms)[0m  [1m[33mUPDATE "games" SET "opponent_score" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["opponent_score", 3], ["updated_at", "2019-10-01 19:40:10.652703"], ["id", 48]]
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[36mGame Update (0.2ms)[0m  [1m[33mUPDATE "games" SET "opponent_score" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["opponent_score", 2], ["updated_at", "2019-10-01 19:40:10.655362"], ["id", 49]]
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[36mGame Update (0.2ms)[0m  [1m[33mUPDATE "games" SET "opponent_score" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["opponent_score", 9], ["updated_at", "2019-10-01 19:40:10.657560"], ["id", 50]]
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+Redirected to http://localhost:3000/matches/16
+Completed 302 Found in 50ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/matches/16" for ::1 at 2019-10-01 14:40:10 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 14:40:16 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/matches/16/edit" for ::1 at 2019-10-01 14:40:19 -0500
+Processing by MatchesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:110
+  Rendering matches/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/_matches_form.html.erb:33
+  Rendered matches/_matches_form.html.erb (6.4ms)
+  Rendered matches/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/matches/16" for ::1 at 2019-10-01 14:40:32 -0500
+Processing by MatchesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MGGf0FjO8JYG9fwzou3giVyxA2NxslteBJaNcO5xFh6GaI4Bm3TfDPkgzjzZihfPEMOeS3FLMEYl7n822BXEAw==", "match"=>{"player_id"=>"1", "opponent_id"=>"1", "date"=>"2019-10-05", "match_type"=>"5", "notes"=>"Testing for score update.", "games_attributes"=>{"0"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"9", "opponent_score"=>"11", "id"=>"48"}, "1"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"9", "opponent_score"=>"11", "id"=>"49"}, "2"=>{"match_id"=>"16", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"9", "opponent_score"=>"11", "id"=>"50"}}}, "commit"=>"Update Match", "id"=>"16"}
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:110
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:52
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/controllers/matches_controller.rb:55
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[36mGame Update (0.3ms)[0m  [1m[33mUPDATE "games" SET "player_score" = ?, "opponent_score" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["player_score", 9], ["opponent_score", 11], ["updated_at", "2019-10-01 19:40:32.854582"], ["id", 48]]
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[36mGame Update (0.3ms)[0m  [1m[33mUPDATE "games" SET "player_score" = ?, "opponent_score" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["player_score", 9], ["opponent_score", 11], ["updated_at", "2019-10-01 19:40:32.858850"], ["id", 49]]
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[36mGame Update (0.4ms)[0m  [1m[33mUPDATE "games" SET "player_score" = ?, "opponent_score" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["player_score", 9], ["opponent_score", 11], ["updated_at", "2019-10-01 19:40:32.861999"], ["id", 50]]
+  ↳ app/controllers/matches_controller.rb:60
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/matches_controller.rb:60
+Redirected to http://localhost:3000/matches/16
+Completed 302 Found in 17ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/matches/16" for ::1 at 2019-10-01 14:40:32 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:8
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:4
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/views/matches/show.html.erb:10
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:16
+  Rendered matches/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-01 14:40:34 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:42
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 17]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+

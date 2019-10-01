@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
     
     resources :players, only: [:show] do
-        resources :matches, only: [:new, :create, :edit, :update, :destroy]        
+        resources :matches, except: [:index]        
     end
 
     resources :players, except: [:index] 
-    resources :matches
-    resources :opponents, except: [:index]
-    resources :games 
+    resources :opponents, only: [:new, :create]
+    resources :matches, except: [:index] 
+    # resources :games 
     resources :sessions, only: [:new, :create, :destroy]
 
 
