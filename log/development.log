@@ -19101,3 +19101,94 @@ Processing by PlayersController#show as HTML
 Completed 200 OK in 90ms (Views: 75.6ms | ActiveRecord: 2.8ms)
 
 
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" ORDER BY "players"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."player_id" = ? ORDER BY "matches"."id" DESC LIMIT ?[0m  [["player_id", 1], ["LIMIT", 1]]
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."player_id" = ? ORDER BY "matches"."id" DESC LIMIT ?[0m  [["player_id", 1], ["LIMIT", 1]]
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/players/1" for ::1 at 2019-10-01 16:08:38 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/players_helper.rb:48: syntax error, unexpected ..., expecting ')'
+...rent_ranking).between?(238, ...)
+...                            ^~~):
+  
+app/helpers/players_helper.rb:48: syntax error, unexpected ..., expecting ')'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/1" for ::1 at 2019-10-01 16:08:47 -0500
+  
+SyntaxError (/Users/baronlip/Documents/FlatIronSchool/_bootcamp/Module_3/RAILS/MyTTF_app/app/helpers/players_helper.rb:48: syntax error, unexpected .., expecting ')'
+...rrent_ranking).between?(238, ..)
+...                             ^~):
+  
+app/helpers/players_helper.rb:48: syntax error, unexpected .., expecting ')'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/players_controller.rb:1:in `<main>'
+Started GET "/players/1" for ::1 at 2019-10-01 16:09:01 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:43
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:81
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:81
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:81
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:46
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 68ms (Views: 53.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-02 00:46:12 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:63
+  Rendering players/show.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."player_id" = ? ORDER BY "matches"."id" DESC LIMIT ?[0m  [["player_id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/players_helper.rb:5
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/players_helper.rb:5
+  [1m[36mCACHE Match Load (0.0ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."player_id" = ? ORDER BY "matches"."id" DESC LIMIT ?[0m  [["player_id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/players_helper.rb:7
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[36mCACHE Match Load (0.0ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."player_id" = ? ORDER BY "matches"."id" DESC LIMIT ?[0m  [["player_id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/players_helper.rb:95
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:43
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:53
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 14]]
+  ↳ app/helpers/matches_helper.rb:81
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 15]]
+  ↳ app/helpers/matches_helper.rb:81
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = ?[0m  [["match_id", 16]]
+  ↳ app/helpers/matches_helper.rb:81
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = ?[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:46
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:47
+  Rendered players/show.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 93ms (Views: 60.4ms | ActiveRecord: 3.1ms)
+
+
