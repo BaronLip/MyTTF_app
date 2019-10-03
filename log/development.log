@@ -28447,3 +28447,35 @@ Processing by PlayersController#show as HTML
 Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.4ms)
 
 
+  [1m[36mOpponent Load (2.5ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "opponents" WHERE (ranking: > 2300)[0m
+  [1m[35m (14.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "opponents" WHERE (ranking: > 2300)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "opponents" WHERE (ranking > 2300)[0m
+Creating scope :pro. Overwriting existing method Opponent.pro.
+Creating scope :pro. Overwriting existing method Opponent.pro.
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "opponents" WHERE (ranking > 2300)[0m
+  [1m[36mOpponent Load (0.9ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.5ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.5ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" ORDER BY "opponents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "opponents" WHERE (ranking > 2300)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "opponents" WHERE (ranking > 2300)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "opponents" WHERE (ranking.between?(1900, 2299))[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "opponents" WHERE (ranking.between?(1900, 2299))[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "opponents" WHERE (ranking >= 1900 AND ranking <= 2300)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "opponents" WHERE (ranking >= 1400 AND ranking <= 1899)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "opponents" WHERE (ranking <= 1399)[0m
