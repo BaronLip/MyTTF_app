@@ -3,7 +3,7 @@ class MatchesController < ApplicationController
     
     def show
         if params[:player_id]
-        	@match = Player.find(params[:player_id]).matchs.find(params[:id])
+        	@match = Player.find(params[:player_id]).matches.find(params[:id])
         else
         	@match = Match.find(params[:id])
         end
@@ -29,12 +29,13 @@ class MatchesController < ApplicationController
 
     def create
         @match = Match.new(match_params)
-        # binding.pry
+        
         if @match.save
+            flash[:success] = "Match added successfully!"
             redirect_to match_path(@match)
         else
-            flash.now[:errors] = @match.errors.full_messages.join(", ")
-            render 'new'
+            flash[:errors] = @match.errors.full_messages.join(", ")
+            redirect_to new_player_match_path(@match.player_id)
         end
     end
 

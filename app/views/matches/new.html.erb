@@ -1,5 +1,11 @@
+<h1>Create a Match</h1>
+
 <% if flash[:errors] %>
     <%= render '/applications/errors' %>
+<% end %>
+
+<% if flash[:success] %>
+    <%= render '/applications/success' %>
 <% end %>
 
 <%= render 'matches_form' %>

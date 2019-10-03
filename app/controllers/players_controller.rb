@@ -1,12 +1,11 @@
 class PlayersController < ApplicationController
-    # before_action :require_login, except:[:new, :create]
-
+    before_action :require_login, except:[:new, :create]
     before_action :find_player, only: [:show, :edit, :update, :destroy]
     # skip_before_action :require_login, only: [:index, :new, :create]
     
-    def index
-        @players = Player.all
-    end
+    # def index
+    #     @players = Player.all
+    # end
 
     def show
         # before_action
@@ -51,8 +50,10 @@ class PlayersController < ApplicationController
     private
 
     def require_login
-        return head(:forbidden) unless session.include? :player_id
-
+        # binding.pry
+        if params[:id].to_i != session[:player_id]
+            return head(:forbidden) #unless session.include? :player_id
+        end
     end
 
     def player_params

@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
     resources :players, except: [:index] 
     resources :opponents, only: [:new, :create, :edit, :update]
-    resources :matches, except: [:index] 
-    # resources :games 
+    resources :matches, except: [:index, :new] 
     resources :sessions, only: [:new, :create, :destroy]
+    # resources :games 
 
 
     root to: 'application#welcome'

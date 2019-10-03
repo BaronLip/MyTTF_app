@@ -1,15 +1,24 @@
+<% if flash[:success] %>
+    <%= render '/applications/success' %>
+<% end %>
+
 <div class="match_stats">
+    <h3>Date:</h3> 
     <%= @match.date %>
     <br>
+    <h3>Opponent:</h3> 
     <%= @match.opponent.username %>
     <br>
+    <h3>Notes:</h3> 
     <%= @match.notes %>
     <br>
+    <hr>
 </div>
  
 <% @match.games.each_with_index do |g, i| %>
     <label><%="Game #{i += 1} score:" %></label>
     <%= "#{g.player_score} : #{g.opponent_score}"%><br>
+    <hr>
 <% end %>
 <br>
 

@@ -8,7 +8,7 @@ module PlayersHelper
             @opponent_ranking = player.matches.last.opponent.ranking
 
             if match_status(player.matches.last) == "Won"
-                binding.pry
+                # binding.pry
                 if @current_ranking < @opponent_ranking
                     if (@opponent_ranking - @current_ranking).between?(0, 12)
                         @current_ranking += 8
