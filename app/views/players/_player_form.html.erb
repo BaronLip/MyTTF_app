@@ -11,7 +11,7 @@
     <%= f.email_field :email %>
     <br>
     <%= f.label :ranking %>
-    <%= f.number_field :ranking, in: 1000..2800, step: 1 %>
+    <%= f.number_field :ranking, in: 100..2800, step: 1, placeholder: @player.ranking %>
     <br>
     <%= f.label :password%>
     <%= f.password_field :password%>

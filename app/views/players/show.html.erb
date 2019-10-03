@@ -44,7 +44,7 @@
                 <td><%= m.date %></td>
 
                 <td><%= match_status(m) %></td>
-                <td><%= m.opponent.username %></td>
+                <td><%= link_to "#{m.opponent.username}", edit_opponent_path(m.opponent) %></td>
                 <td><%= m.match_type %></td>
                 <td><%= match_scores(m) %></td>
                 <td><%= m.notes %></td>

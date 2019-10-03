@@ -28,13 +28,12 @@ class MatchesController < ApplicationController
     end
 
     def create
-        # binding.pry
         @match = Match.new(match_params)
-        # @match = Match.find_by(:id => params(match_id))
+        # binding.pry
         if @match.save
             redirect_to match_path(@match)
         else
-            flash[:errors] = @match.errors.full_messages.join(", ")
+            flash.now[:errors] = @match.errors.full_messages.join(", ")
             render 'new'
         end
     end

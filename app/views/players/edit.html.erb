@@ -2,4 +2,8 @@
     <h1>Update Player</h1>
 </div>
 
+<% if flash[:errors] %>
+    <%= render '/applications/errors' %>
+<% end %>
+
 <%= render 'player_form' %>

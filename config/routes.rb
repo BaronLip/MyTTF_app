@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     end
 
     resources :players, except: [:index] 
-    resources :opponents, only: [:new, :create]
+    resources :opponents, only: [:new, :create, :edit, :update]
     resources :matches, except: [:index] 
     # resources :games 
     resources :sessions, only: [:new, :create, :destroy]
