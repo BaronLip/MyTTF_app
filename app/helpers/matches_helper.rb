@@ -40,7 +40,7 @@ module MatchesHelper
     end
 
     def win_percentage(player)
-        if player.matches.count == nil
+        if player.matches.count == 0
             "No matches yet. Get started!"
         else
             (match_wins(player).to_f / player.matches.count.to_f).round(2)

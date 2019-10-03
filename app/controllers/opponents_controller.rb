@@ -8,6 +8,7 @@ class OpponentsController < ApplicationController
         @opponent = Opponent.new(opponent_params)
 
         if @opponent.save
+            flash[:success] = "Opponent created successfully!"
             redirect_to player_path(current_player)
         else
             flash[:errors] = @opponent.errors.full_messages.join(", ")

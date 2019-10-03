@@ -1,3 +1,7 @@
+<% if flash[:success] %>
+    <%= render '/applications/success' %>
+<% end %>
+
 <div id="player_stats" style="border: solid black;">
 
     <p>Username: <%= @player.username %></p>
