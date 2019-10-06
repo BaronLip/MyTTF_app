@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
                 session[:player_id] = @player.id # Logs player in.
                 redirect_to player_path(@player), notice: "Logged in!"
             else
-                @player = Player.new(:email => "#{oauth_nickname} + '@' #{oauth_nickname} +'.com'" , :gender => "Male", :password => oauth_nickname, :username => oauth_nickname, :ranking => 1000)
+                @player = Player.new(:email => "#{oauth_nickname} @ #{oauth_nickname}.com", :gender => "Male", :password => oauth_nickname, :username => oauth_nickname, :ranking => 1000)
                 if @player.save
                     session[:player_id] = @player.id # Logs player in.
                     redirect_to player_path(@player), notice: "Logged in!"

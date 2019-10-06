@@ -30293,3 +30293,207 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-10-06 00:22:33 -0500
+Processing by ApplicationController#welcome as HTML
+  Rendering applications/welcome.html.erb within layouts/application
+  Rendered applications/welcome.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for ::1 at 2019-10-06 00:22:34 -0500
+Started GET "/auth/github/callback?code=f5d4de7318468410058e&state=351d6be78e17d3c05687e194a9465c3439a0c6fa1cbd5920" for ::1 at 2019-10-06 00:22:34 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"f5d4de7318468410058e", "state"=>"351d6be78e17d3c05687e194a9465c3439a0c6fa1cbd5920", "provider"=>"github"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT $2[0m  [["username", "baronlip"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:15
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 LIMIT $2[0m  [["username", "baronlip"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 LIMIT $2[0m  [["email", "baronlip + '@' baronlip +'.com'"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15
+  [1m[36mPlayer Create (0.5ms)[0m  [1m[32mINSERT INTO "players" ("username", "email", "ranking", "gender", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "baronlip"], ["email", "baronlip + '@' baronlip +'.com'"], ["ranking", 1000], ["gender", "Male"], ["created_at", "2019-10-06 05:22:35.412800"], ["updated_at", "2019-10-06 05:22:35.412800"], ["password_digest", "$2a$12$0KIzafcCCcOOZ6xSGwnypeQYUSEOi1G389DCgNJu2DMCQ/pKe/ZwC"]]
+  ↳ app/controllers/sessions_controller.rb:15
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:15
+Redirected to http://localhost:3000/players/2
+Completed 302 Found in 293ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-06 00:22:35 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/players_helper.rb:4
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:43
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:53
+  Rendered players/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 29ms (Views: 24.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/players/2/edit" for ::1 at 2019-10-06 00:22:54 -0500
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_player_form.html.erb (93.7ms)
+  Rendered players/edit.html.erb within layouts/application (95.1ms)
+Completed 200 OK in 115ms (Views: 111.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/players/2" for ::1 at 2019-10-06 00:25:58 -0500
+Processing by PlayersController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SiVVcPPZaRgFx01N0jY3kSWkNDVyYv6062h57/NBX2KnMzKKdMXClMEt2OzG9Mkmyha3TY7UnioToo0AnRamZg==", "player"=>{"username"=>"baron", "gender"=>"male", "email"=>"baron@baron.com", "ranking"=>"1000", "password"=>"[FILTERED]"}, "commit"=>"Update Player", "id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "baron"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "baron@baron.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Update (0.5ms)[0m  [1m[33mUPDATE "players" SET "username" = $1, "email" = $2, "password_digest" = $3, "gender" = $4, "updated_at" = $5 WHERE "players"."id" = $6[0m  [["username", "baron"], ["email", "baron@baron.com"], ["password_digest", "$2a$12$SKAb03zQSl2podSYV5kIC.h9iK5xCdzMvLkbROrL6Xu4/O2nrc3NW"], ["gender", "male"], ["updated_at", "2019-10-06 05:25:59.112020"], ["id", 2]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:38
+Redirected to http://localhost:3000/players/2
+Completed 200 OK in 280ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-06 00:25:59 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.6ms)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/players_helper.rb:4
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:43
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:53
+  Rendered players/show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 39ms (Views: 31.3ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/players/2/edit" for ::1 at 2019-10-06 00:26:02 -0500
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_player_form.html.erb (2.9ms)
+  Rendered players/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/players/2" for ::1 at 2019-10-06 00:26:18 -0500
+Processing by PlayersController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DzRrGxpmDSmgnMLWPOvcWr7pNXGsLo3BTVpm3++aWeTiIgzhnXqmpWR2V3coKSLtUVu2CVCY7V+1kJIwgc2g4A==", "player"=>{"username"=>"Baron", "gender"=>"male", "email"=>"baron@baron.com", "ranking"=>"1700", "password"=>"[FILTERED]"}, "commit"=>"Update Player", "id"=>"2"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Baron"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "baron@baron.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Update (0.3ms)[0m  [1m[33mUPDATE "players" SET "username" = $1, "ranking" = $2, "password_digest" = $3, "updated_at" = $4 WHERE "players"."id" = $5[0m  [["username", "Baron"], ["ranking", 1700], ["password_digest", "$2a$12$p2SYgJKwYNEkwlHV5K3xxO91.YUyAgtwloF4w5kMVF2O/2KepVJrW"], ["updated_at", "2019-10-06 05:26:19.195720"], ["id", 2]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:38
+Redirected to http://localhost:3000/players/2
+Completed 200 OK in 266ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-06 00:26:19 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (1.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.6ms)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/players_helper.rb:4
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:43
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:53
+  Rendered players/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/logout" for ::1 at 2019-10-06 00:26:29 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-06 00:26:29 -0500
+Processing by ApplicationController#welcome as HTML
+  Rendering applications/welcome.html.erb within layouts/application
+  Rendered applications/welcome.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-06 00:26:30 -0500
+Processing by ApplicationController#welcome as HTML
+  Rendering applications/welcome.html.erb within layouts/application
+  Rendered applications/welcome.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for ::1 at 2019-10-06 00:26:34 -0500
+Started GET "/auth/github/callback?code=f843017a5e08224866ab&state=7d9f898efc8fb0d15171220c063c5a8825e389718e0324ac" for ::1 at 2019-10-06 00:26:35 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"f843017a5e08224866ab", "state"=>"7d9f898efc8fb0d15171220c063c5a8825e389718e0324ac", "provider"=>"github"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT $2[0m  [["username", "baronlip"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:15
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 LIMIT $2[0m  [["username", "baronlip"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 LIMIT $2[0m  [["email", "baronlip@baronlip.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("username", "email", "ranking", "gender", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "baronlip"], ["email", "baronlip@baronlip.com"], ["ranking", 1000], ["gender", "Male"], ["created_at", "2019-10-06 05:26:35.714821"], ["updated_at", "2019-10-06 05:26:35.714821"], ["password_digest", "$2a$12$JJqzjeNd3i.bR8KmhjPZ0OKvThRY4a5oMb3GRVazQw.OtQP09YMaC"]]
+  ↳ app/controllers/sessions_controller.rb:15
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:15
+Redirected to http://localhost:3000/players/3
+Completed 302 Found in 270ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/players/3" for ::1 at 2019-10-06 00:26:35 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 3]]
+  ↳ app/helpers/players_helper.rb:4
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 3]]
+  ↳ app/helpers/matches_helper.rb:43
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 3]]
+  ↳ app/helpers/matches_helper.rb:53
+  Rendered players/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/players/3/edit" for ::1 at 2019-10-06 00:26:37 -0500
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_player_form.html.erb (2.5ms)
+  Rendered players/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
