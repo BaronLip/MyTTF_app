@@ -1,5 +1,5 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-    provider :github, '66d7eb70d3fde6219efa', 'f94d612375c6cdb3d9272efd411b5913661eeb3f'
+    provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
 end
 
 # Rails.application.config.middleware.use OmniAuth::Builder do
