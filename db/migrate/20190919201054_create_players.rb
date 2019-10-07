@@ -4,8 +4,8 @@ class CreatePlayers < ActiveRecord::Migration[5.2]
         t.string :username
         t.string :email
         t.integer :ranking
-        t.string :wins
-        t.string :losses
+        t.integer :wins, default: 0 
+        t.integer :losses, default: 0
         t.string :gender
 
         t.timestamps

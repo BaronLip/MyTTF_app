@@ -9,11 +9,13 @@ class SessionsController < ApplicationController
             # Since GitHub doesn't want to give me an email value, this creates Player by using "nickname" instead. The email & password is generated with the nickname value.
             if @player = Player.find_by(:username => oauth_nickname)
                 session[:player_id] = @player.id # Logs player in.
+                flash[:success] = "OAuth login successful!"
                 redirect_to player_path(@player), notice: "Logged in!"
             else
-                @player = Player.new(:email => "#{oauth_nickname} @ #{oauth_nickname}.com", :gender => "Male", :password => oauth_nickname, :username => oauth_nickname, :ranking => 1000)
+                @player = Player.new(:email => "#{oauth_nickname}@#{oauth_nickname}.com", :gender => "Male", :password => oauth_nickname, :username => oauth_nickname, :ranking => 1000)
                 if @player.save
                     session[:player_id] = @player.id # Logs player in.
+                    flash[:success] = "OAuth login as new user successful!"
                     redirect_to player_path(@player), notice: "Logged in!"
                 else
                     flash[:errors] = @player.errors.full_messages.inspect

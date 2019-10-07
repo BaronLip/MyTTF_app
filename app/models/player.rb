@@ -5,6 +5,7 @@ class Player < ApplicationRecord
     has_secure_password
     # has_secure_password :recovery_password, validations: false
     
-    validates_presence_of :username, :email, :ranking, :gender, :password
+    validates :password, presence: true, on: :create
+    validates_presence_of :username, :email, :ranking, :gender
     validates_uniqueness_of :username, :email
 end

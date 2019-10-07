@@ -14,6 +14,6 @@ require 'faker'
 # Game.destroy_all
 
 
-20.times {
-    Opponent.create(username: Faker::Name.name, ranking: Faker::Number.between(from: 1000, to: 2400))
-}
+# 20.times {
+#     Opponent.create(username: Faker::Name.name, ranking: Faker::Number.between(from: 1000, to: 2400))
+# }
