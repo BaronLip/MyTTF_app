@@ -31,7 +31,10 @@ class MatchesController < ApplicationController
 
     def create
         @match = Match.new(match_params)
-        @player = @match.player
+
+        @match.games.each do |g|
+            g.opponent_id = @match.opponent_id
+        end
 
         if @match.save
             flash[:success] = "Match added successfully!"
@@ -196,7 +199,6 @@ class MatchesController < ApplicationController
                         @player.ranking += 50
                         @opponent.ranking -= 50
                     end
-                    binding.pry
                     @player.save
                     @opponent.save
                 elsif
@@ -240,7 +242,7 @@ class MatchesController < ApplicationController
                     @player.save
                     @opponent.save
                 end
-            elsif match_status(player.matches.last) == "Lost"
+            elsif match_status(@player.matches.last) == "Lost"
                 if @player.ranking < @opponent.ranking
                     if (@opponent.ranking - @player.ranking).between?(0, 12)
                         @opponent.ranking += 8

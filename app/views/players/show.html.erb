@@ -1,3 +1,5 @@
+<h1>Welcome <%= @player.username %></h1>
+
 <% if flash[:success] %>
     <%= render '/applications/success' %>
 <% end %>
@@ -13,6 +15,9 @@
     <span>Match Wins: <%= match_wins(@player) %> |</span>
     <span>Losses: <%= match_losses(@player) %></span>
     <br>
+
+    <p>Total number of games:<%= @player.games.count %></p>
+
     <%= button_to "Update Player", edit_player_path(@player), method: :get %>
     <br>
 

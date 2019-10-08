@@ -4,7 +4,7 @@ module MatchesHelper
         if match.player.nil?
             select_tag "match[player_id]", options_from_collection_for_select(Player.all, :id, :username, match.player_id) 
         else
-            # Make sure to have the f.hidden_field. This carries the "id" from posts#new over and assigns it to posts#create.
+            # Make sure to have the f.hidden_field. This carries the "id" from player#new over and assigns it to player#create.
             hidden_field_tag "match[player_id]", match.player_id
         end
     end

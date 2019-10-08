@@ -9,7 +9,7 @@ class PlayersController < ApplicationController
 
     def show
         # before_action
-        @match_scores = []
+        @games = @player.games
     end
 
     def new
