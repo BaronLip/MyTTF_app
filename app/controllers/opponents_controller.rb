@@ -2,6 +2,7 @@ class OpponentsController < ApplicationController
 
     def new
         @opponent = Opponent.new
+        @opponents = Opponent.all
     end
 
     def create
@@ -17,11 +18,11 @@ class OpponentsController < ApplicationController
     end
 
     def edit
-        @opponent = Opponent.find_by(:id => params[:opponent_id])
+        @opponent = Opponent.find_by(:id => params[:id])
     end
     
     def update
-        @opponent = Opponent.find_by(:id => params[:opponent_id])
+        @opponent = Opponent.find_by(:id => params[:id])
         
         binding.pry
         if @opponent.update(opponent_params)

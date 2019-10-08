@@ -49,25 +49,6 @@ module MatchesHelper
         end
     end
 
-    # def match_wins(player)
-    #     @player_match_wins = player.wins
-    #     @player_match_losses = player.losses
-    #     # binding.pry
-    #     player.matches.each do |m|
-    #         @opponent = m.opponent
-    #         game_wins(m)
-    #         if @game_wins > @game_losses
-    #             @player_match_wins += 1
-    #             @opponent.wins -= 1
-    #         else
-    #             @player_match_losses += 1
-    #             @opponent.losses -= 1
-    #         end
-    #     end
-    #     @player.save
-    # end
-
-
     def match_wins(player)
         @match_wins = 0
         @match_losses = 0

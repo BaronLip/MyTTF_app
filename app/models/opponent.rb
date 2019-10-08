@@ -9,4 +9,5 @@ class Opponent < ApplicationRecord
     scope :elite, -> {where("ranking >= 1900 AND ranking <= 2299")}
     scope :competitor, -> {where("ranking >= 1400 AND ranking <= 1899")}
     scope :amateur, -> {where("ranking <= 1399")}
+
 end
