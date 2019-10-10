@@ -4,5 +4,23 @@
 
 .mx-auto form {
     color: #f8f9fa;
-    
+}
+
+.link:link {
+    color: #f713ff !important;
+}
+
+/* visited link */
+.link:visited {
+  color: #f713ff;
+}
+
+/* mouse over link */
+.link:hover {
+  color: #f8f9fa;
+}
+
+/* selected link */
+.link:active {
+  color: #00bbff;
 }

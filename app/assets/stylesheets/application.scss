@@ -18,14 +18,13 @@
 // lt-gray #f8f9fa
 
 
- @import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 @font-face {
     font-family: 'Quicksand';
     src: url('/app/assets/fonts/Quicksand-VariableFont:wght.ttf');
 }
-
 
 .container-fluid {
     padding-right: 30px;
@@ -46,9 +45,14 @@ li {
 .color_backdrop {
     display: flex;
     background-color: #0268b3;
-    height: 600px;
+    // height: 600px;
     align-items: center;
     font-family: 'Quicksand';
     font-style: 500;
+    color: #f8f9fa;
+}
+
+.table {
+    color: #f8f9fa;
 }
 

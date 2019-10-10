@@ -22,12 +22,19 @@
                     <div class='navbar-brand'>
                         <%= link_to 'MyTTF', root_path, class: "navbar-brand" %>
                     </div>
-                    <ul>
-                        <li><%= link_to "Github Login", "/auth/github", :method => :get, class: "btn btn-default" %></li>
-                        <li><%= link_to "Signup", signup_path, :method => :get, class: "btn btn-default" %></li>
-                        <li><%= link_to "Login", new_session_path, :method => :get, class: "btn btn-default" %></li>
-                    </ul>
-
+                    
+                    <% if session[:player_id] == nil %>
+                        <ul>
+                            <li><%= link_to "Github Login", "/auth/github", :method => :get, class: "btn btn-default" %></li>
+                            <li><%= link_to "Signup", signup_path, :method => :get, class: "btn btn-default" %></li>
+                            <li><%= link_to "Login", new_session_path, :method => :get, class: "btn btn-default" %></li>
+                        </ul>
+                    <% elsif is_logged_in? %>
+                        <ul>
+                            <li>
+                            <%= link_to "Log Out", logout_path, method: :get, class: "btn btn-default" %></li>
+                        </ul>
+                    <% end %>
                 </div>
             </nav>
         </header>
