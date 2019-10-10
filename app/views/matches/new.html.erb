@@ -1,13 +1,15 @@
-<h1>Create a Match</h1>
+<div class="container">
+    <h1>Create a Match</h1>
 
-<% if flash[:errors] %>
-    <%= render '/applications/errors' %>
-<% end %>
+    <% if flash[:errors] %>
+        <%= render '/applications/errors' %>
+    <% end %>
 
-<% if flash[:success] %>
-    <%= render '/applications/success' %>
-<% end %>
+    <% if flash[:success] %>
+        <%= render '/applications/success' %>
+    <% end %>
 
-<%= render 'matches_form' %>
+    <%= render 'matches_form' %>
 
-<%= button_to "Back to Player", player_path(current_player), method: :get %>
+    <%= button_to "Back to Player", player_path(current_player), method: :get %>
+</div>

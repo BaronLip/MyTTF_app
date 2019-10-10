@@ -1,15 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>MyTTF</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="en">
+    <head>
+        <title>MyTTF</title>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+        <!-- Sets viewport on mobile device to be 100% -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <!-- Google Font Monoton & Quicksand: regular, medium, bold -->
+        <link href="https://fonts.googleapis.com/css?family=Monoton|Quicksand:400,500,700&display=swap" rel="stylesheet">
 
-  <body>
-    <%= yield %>
-  </body>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+        <header class='container'>
+            <nav class='navbar navbar-light bg-light'>
+                <div class='container-fluid'>
+                    <div class='navbar-brand'>
+                        <%= link_to 'MyTTF', root_path, class: "navbar-brand" %>
+                    </div>
+                    <ul>
+                        <li><%= link_to "Github Login", "/auth/github", :method => :get, class: "btn btn-default" %></li>
+                        <li><%= link_to "Signup", signup_path, :method => :get, class: "btn btn-default" %></li>
+                        <li><%= link_to "Login", new_session_path, :method => :get, class: "btn btn-default" %></li>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+        
+        <%= yield %>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>

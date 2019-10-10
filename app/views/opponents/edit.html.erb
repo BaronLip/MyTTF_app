@@ -1,10 +1,12 @@
-<h1>Edit <%= @opponent.username %></h1>
+<div class="container">
+    <h1>Edit <%= @opponent.username %></h1>
 
-<% if flash[:errors] %>
-    <%= render '/applications/errors' %>
-<% end %>
+    <% if flash[:errors] %>
+        <%= render '/applications/errors' %>
+    <% end %>
 
-<%= render 'opponent_form' %>
+    <%= render 'opponent_form' %>
 
-<br>
-<%= button_to "Cancel", player_path(current_player), method: :get %>
+    <br>
+    <%= button_to "Cancel", player_path(current_player), method: :get %>
+</div>

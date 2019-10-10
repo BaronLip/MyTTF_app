@@ -1,73 +1,72 @@
-<h1>Welcome <%= @player.username %></h1>
+<div class="container">
+    <h1>Welcome <%= @player.username %></h1>
 
-<% if flash[:success] %>
-    <%= render '/applications/success' %>
-<% end %>
+    <% if flash[:success] %>
+        <%= render '/applications/success' %>
+    <% end %>
+    <div id="player_stats" style="border: solid black;">
 
-<div id="player_stats" style="border: solid black;">
+        <p>Username: <%= @player.username %></p>
+        
+        <p>Ranking: <%= @player.ranking %></p>
+        
+        <p>Percentage Wins: <%= win_percentage(@player) %></p>
 
-    <p>Username: <%= @player.username %></p>
-    
-    <p>Ranking: <%= @player.ranking %></p>
-    
-    <p>Percentage Wins: <%= win_percentage(@player) %></p>
+        <span>Match Wins: <%= match_wins(@player) %> |</span>
+        <span>Losses: <%= match_losses(@player) %></span>
+        <br>
 
-    <span>Match Wins: <%= match_wins(@player) %> |</span>
-    <span>Losses: <%= match_losses(@player) %></span>
+        <p>Total number of games:<%= @player.games.count %></p>
+
+        <%= button_to "Update Player", edit_player_path(@player), method: :get %>
+        <br>
+
+    </div>
     <br>
 
-    <p>Total number of games:<%= @player.games.count %></p>
-
-    <%= button_to "Update Player", edit_player_path(@player), method: :get %>
-    <br>
-
-</div>
-<br>
-
-
-<div id="player_matches" style="border: solid black;">
-    
-    <br>
-    <%= button_to "Add Opponent", new_opponent_path, method: :get %>
-    <br>
-    <%= button_to "Add Match", new_player_match_path(@player), method: :get %>
-    <br>
-    <table>
-        <thead>
-            <tr>
-                <th > All Matches </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Date</th> 
-                <th>Status</th>
-                <th>Opponent</th>
-                <th>Ranking</th>
-                <th>Best of</th>
-                <th>Scores</th>
-                <th>Notes</th>
-                <th>Edit/Delete</th>
-            </tr>
-            <% @player.matches.each do |m| %>
-            <tr>
-                <td><%= m.date %></td>
-                <td><%= match_status(m) %></td>
-                <td><%= link_to "#{m.opponent.username}", edit_opponent_path(m.opponent) %></td>
-                <td><%= m.opponent.ranking %></td>
-                <td><%= m.match_type %></td>
-                <td><%= match_scores(m) %></td>
-                <td><%= m.notes %></td>
-                <td>
-                    <%= button_to "Edit", edit_match_path(m), method: :get %>
-                    <%= button_to "Delete", m, method: :delete %>
-                </td>
-            </tr>
-            <% end %>
-        </tbody>
-    </table>
-</div>
-
+    <div id="player_matches" style="border: solid black;">
+        
+        <br>
+        <%= button_to "Add Opponent", new_opponent_path, method: :get %>
+        <br>
+        <%= button_to "Add Match", new_player_match_path(@player), method: :get %>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th > All Matches </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Date</th> 
+                    <th>Status</th>
+                    <th>Opponent</th>
+                    <th>Ranking</th>
+                    <th>Best of</th>
+                    <th>Scores</th>
+                    <th>Notes</th>
+                    <th>Edit/Delete</th>
+                </tr>
+                <% @player.matches.each do |m| %>
+                <tr>
+                    <td><%= m.date %></td>
+                    <td><%= match_status(m) %></td>
+                    <td><%= link_to "#{m.opponent.username}", edit_opponent_path(m.opponent) %></td>
+                    <td><%= m.opponent.ranking %></td>
+                    <td><%= m.match_type %></td>
+                    <td><%= match_scores(m) %></td>
+                    <td><%= m.notes %></td>
+                    <td>
+                        <%= button_to "Edit", edit_match_path(m), method: :get %>
+                        <%= button_to "Delete", m, method: :delete %>
+                    </td>
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
 <br>
 <!-- <%= link_to "Log Out", session_path, method: :delete %> -->
 <%= button_to "Log Out", logout_path, method: :get %> 
+</div>

@@ -1,13 +1,21 @@
-<div id="welcome">
-    <h1>Welcome to MyTTF</h1>
-    <h3>Keep track of your progress and rank up against your opponents.</h3>
+<div class="container">
+    <div class="color_backdrop">
+        <div class="text-center" style="max-width:500px; margin: auto;">
+            <h1 style="color: #f8f9fa;">Welcome to MyTTF
+            </h1>
+            
+            <h3 style="color: #f8f9fa;">Keep track of your progress and rank up against your opponents.
+            </h3>
+            <br>
+            <button type="button" class="btn btn-primary"><%= button_to "Login via Github", "/auth/github", :method => :get %>
+            </button>
+
+            <button type="button" class="btn btn-primary"><%= button_to "Signup", signup_path, :method => :get %>
+            </button>
+
+            <button type="button" class="btn btn-primary"><%= button_to "Login", new_session_path, :method => :get %>
+            </button>
+
+        </div>
+    </div>
 </div>
-
-<%= button_to "Login via Github", "/auth/github", :method => :get %>
-<br>
-
-<%= button_to "Signup", signup_path, :method => :get %>
-<br>
-
-<%= button_to "Login", new_session_path, :method => :get %>
-

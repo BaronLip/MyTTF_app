@@ -1,18 +1,25 @@
-<p id=”alert”><%= alert %></p>
+<div class="container">
+    <div class="text-center">
+        <div class="color_backdrop">
+            <div class="mx-auto form">
+                <p id=”alert”><%= alert %></p>
+                <h1 style="color: #f8f9fa;">Login</h1>
+                <%= form_with url: sessions_path do |f| %>
+                    <div class="form-group row">
+                        <%= f.label :email, class: "col-sm-2 col-form-label" %>
+                        <%= f.text_field :email, class: "form-control"  %>
+                    </div>
 
-<h1>Login</h1>
-<%= form_tag sessions_path do |form| %>
-    <div class=”field”>
-        <%= label_tag :email %>
-        <%= text_field_tag :email %>
-    </div>
+                    <div class="form-group row">
+                        <%= f.label :password, class: "col-sm-2 col-form-label" %>
+                        <%= f.password_field :password, class: "form-control"  %>
+                    </div>
 
-    <div class=”field”>
-        <%= label_tag :password %>
-        <%= password_field_tag :password %>
+                    <div class="form-group row">
+                        <%= f.submit 'Login' %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
     </div>
-
-    <div class=”actions”>
-        <%= submit_tag 'Login' %>
-    </div>
-<% end %>
+</div>
