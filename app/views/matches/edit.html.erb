@@ -1,1 +1,18 @@
-<%= render 'matches_form' %>
+<div class="container">
+    <div class="text-center">
+        <% if flash[:errors] %>
+            <%= render '/applications/errors' %>
+        <% end %>
+
+        <% if flash[:success] %>
+            <%= render '/applications/success' %>
+        <% end %>
+        <div class="color_backdrop">
+            <div class="mx-auto form" style="width: auto;">
+                <%= render 'matches_form' %>
+
+                <%= button_to "Back to Player", player_path(current_player), method: :get %>
+            </div>
+        </div>
+    </div>
+</div>

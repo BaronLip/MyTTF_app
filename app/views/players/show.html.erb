@@ -5,19 +5,18 @@
         <% end %>
         <div class="color_backdrop">
             <div class="mx-auto">
-                <h1 >Welcome <%= @player.username %></h1>
+                <h1 >Welcome <%= @player.username.titlecase %></h1>
 
-                <p>Username: <%= @player.username %></p>
+                <h5>Username: <%= @player.username %></h5>
                 
-                <p>Ranking: <%= @player.ranking %></p>
+                <h5>Ranking: <%= @player.ranking %></h5>
                 
-                <p>Percentage Wins: <%= win_percentage(@player) %></p>
+                <h5>Percentage Wins: <%= win_percentage(@player) %></h5>
 
-                <span>Match Wins: <%= match_wins(@player) %> |</span>
-                <span>Losses: <%= match_losses(@player) %></span>
+                <h5>Match Wins: <%= match_wins(@player) %> | Losses: <%= match_losses(@player) %></h5>
+
+                <h5>Total number of games:<%= @player.games.count %></h5>
                 <br>
-
-                <p>Total number of games:<%= @player.games.count %></p>
 
                 <div class="row">
                     <div class="col">
@@ -71,9 +70,10 @@
             </div>
         </div>
         <br>
-<!-- <%= link_to "Log Out", session_path, method: :delete %> -->
-<%= button_to "Log Out", logout_path, method: :get %> 
+<!-- <%= link_to "Log Out", session_path, method: :delete %> 
 
+<%= button_to "Log Out", logout_path, method: :get %> 
+-->
         <br>
     </div>
 </div>

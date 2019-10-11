@@ -1,15 +1,19 @@
 <div class="container">
-    <h1>Create a Match</h1>
+    <div class="text-center">
+        <% if flash[:errors] %>
+            <%= render '/applications/errors' %>
+        <% end %>
 
-    <% if flash[:errors] %>
-        <%= render '/applications/errors' %>
-    <% end %>
+        <% if flash[:success] %>
+            <%= render '/applications/success' %>
+        <% end %>
+        <div class="color_backdrop">
+            <div class="mx-auto form" style="width: auto;">
+                <h1>Create a Match</h1>
+                <%= render 'matches_form' %>
 
-    <% if flash[:success] %>
-        <%= render '/applications/success' %>
-    <% end %>
-
-    <%= render 'matches_form' %>
-
-    <%= button_to "Back to Player", player_path(current_player), method: :get %>
+                <%= button_to "Back to Player", player_path(current_player), method: :get %>
+            </div>
+        </div>
+    </div>
 </div>

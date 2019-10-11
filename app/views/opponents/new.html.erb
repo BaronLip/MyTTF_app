@@ -1,14 +1,16 @@
 <div class="container">
-    <h1>Create an Opponent</h1>
-
-    <% if flash[:errors] %>
-        <%= render '/applications/errors' %>
-    <% end %>
-
-    <%= render 'opponent_form' %>
-
-    <%= button_to "Cancel", player_path(current_player), method: :get %>
-    <hr>
+    <div class="text-center">
+        <% if flash[:errors] %>
+            <%= render '/applications/errors' %>
+        <% end %>
+        <div class="color_backdrop">
+            <div class="mx-auto form" style="width: auto;">
+                <h1>Create an Opponent</h1>
+                <%= render 'opponent_form' %>
+                <hr>
+            </div>
+        </div>
+    </div>
 
     <h1>All Opponents</h1>
     <h3>Pros:</h3>

@@ -1,11 +1,11 @@
 <div class="container">
     <div class="text-center">
+        <% if flash[:errors] %>
+            <%= render '/applications/errors' %>
+        <% end %>
         <div class="color_backdrop">
-            <div class="mx-auto" style="width: auto;">
-                <% if flash[:errors] %>
-                    <%= render '/applications/errors' %>
-                <% end %>
-                <h1 style="color: #f8f9fa;">Signup</h1>
+            <div class="mx-auto form" style="width: auto;">
+                <h1>Signup</h1>
                 <%= render 'player_form' %>
             </div>
         </div>

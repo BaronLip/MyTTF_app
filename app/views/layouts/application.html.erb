@@ -29,7 +29,7 @@
                             <li><%= link_to "Signup", signup_path, :method => :get, class: "btn btn-default" %></li>
                             <li><%= link_to "Login", new_session_path, :method => :get, class: "btn btn-default" %></li>
                         </ul>
-                    <% elsif is_logged_in? %>
+                    <% elsif session[:player_id] %>
                         <ul>
                             <li>
                             <%= link_to "Log Out", logout_path, method: :get, class: "btn btn-default" %></li>

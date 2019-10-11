@@ -23,8 +23,7 @@ class OpponentsController < ApplicationController
     
     def update
         @opponent = Opponent.find_by(:id => params[:id])
-        
-        binding.pry
+
         if @opponent.update(opponent_params)
             redirect_to player_path(current_player)
         else

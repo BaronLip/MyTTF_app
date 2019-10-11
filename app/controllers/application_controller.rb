@@ -13,8 +13,7 @@ class ApplicationController < ActionController::Base
     end
 
     def is_logged_in?
-        binding.pry
-        !!session[:player_id] = @player.id
+        !!session[:player_id] == @player.id
     end
     
 end

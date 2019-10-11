@@ -1,48 +1,55 @@
-<div class="container">
-    <%= form_for(@match) do |f| %>
+<%= form_with model: @match do |f| %>
+    <div class="form-group row">
+        <!-- <%= f.label :player_id, "Select Player:", class: "col-sm-2 col-form-label" %> -->
+        <%= player_id_field(@match) %>
+
+        <%= f.label :player_id, "Select Opponent:", class: "col-sm-2 col-form-label" %>
+        <%= opponent_id_field(@match) %>
+
+        <%= f.label :date, "Date:", class: "col-sm-2 col-form-label" %>
+        <%= f.date_field :date %>
+    </div>
+    
+    <fieldset class="form-group">
+        <div class="row">
+            <%= f.label :match_type, "Best of:", class: "col-form-label col-sm-2 pt-0" %>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <%= f.label :match_type, "7"%>
+                    <%= f.radio_button :match_type, "7" %>
+
+                    <%= f.label :match_type, "5"%>
+                    <%= f.radio_button :match_type, "5" %>
+
+                    <%= f.label :match_type, "3"%>
+                    <%= f.radio_button :match_type, "3" %>
+
+                    <%= f.label :match_type, "1"%>
+                    <%= f.radio_button :match_type, "1" %>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    
+    <div class="form-group">
+        <%= f.label :notes, "Notes:", class: "col-form-label col-sm-2 pt-0" %>
+        <%= f.text_area :notes, size: "30x10", placeholder: "Details of this match.", class: "form-control" %>
+    </div>
+
+    <hr>
+
+    <% n = 0 %>
+    <%= f.fields_for :games do |g| %>
+        <%= g.hidden_field :match_id %>
+        <%= g.hidden_field :player_id %>
+        <%= g.hidden_field :opponent_id %>
+
+        <%= g.label "Game #{n += 1}:" %><br>
+        <%= g.label :player_score, "Your Score:" %>
+        <%= g.number_field :player_score, within: 0...22 %><br>
         
-        <%= f.label :player_id, "Select Player:"%>
-        <%= player_id_field(@match) %><br>
-
-        <%= f.label :player_id, "Select Opponent:"%>
-        <%= opponent_id_field(@match) %><br>
-
-        <%= f.label :date, "Date:"%>
-        <%= f.date_field :date %><br>
-        
-        <%= f.label :match_type, "Best of:"%>
-        <br>
-        <%= f.label :match_type, "7"%>
-        <%= f.radio_button :match_type, "7" %>
-        <br>
-        <%= f.label :match_type, "5"%>
-        <%= f.radio_button :match_type, "5" %>
-        <br>
-        <%= f.label :match_type, "3"%>
-        <%= f.radio_button :match_type, "3" %>
-        <br>
-        <%= f.label :match_type, "1"%>
-        <%= f.radio_button :match_type, "1" %>
-        <br>
-        
-        <%= f.label :notes, "Notes:" %>
-        <%= f.text_area :notes, size: "30x10", placeholder: "Details of this match." %>
-        <br>
-        <hr>
-
-        <% n = 0 %>
-        <%= f.fields_for :games do |g| %>
-            <%= g.hidden_field :match_id %>
-            <%= g.hidden_field :player_id %>
-            <%= g.hidden_field :opponent_id %>
-
-            <%= g.label "Game #{n += 1}:" %><br>
-            <%= g.label :player_score, "Your Score:" %>
-            <%= g.number_field :player_score, within: 0...22 %><br>
-            
-            <%= g.label :opponent_score, "Opponent Score:"%>
-            <%= g.number_field :opponent_score, within: 0...22  %><br><hr>
-        <% end %>
-    <%= f.submit %>
+        <%= g.label :opponent_score, "Opponent Score:"%>
+        <%= g.number_field :opponent_score, within: 0...22  %><br><hr>
     <% end %>
-</div>
+<%= f.submit %>
+<% end %>
