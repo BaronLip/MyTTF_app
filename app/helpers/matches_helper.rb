@@ -12,6 +12,7 @@ module MatchesHelper
     def opponent_id_field(match)
         select_tag "match[opponent_id]", options_from_collection_for_select(Opponent.all, :id, :username), { :class => "form-control"}  
     end
+
     
     def match_scores(match)
         @match_scores = []

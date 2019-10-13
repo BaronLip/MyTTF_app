@@ -1,36 +1,39 @@
-<% if flash[:success] %>
-    <%= render '/applications/success' %>
-<% end %>
-<% if flash[:won] %>
-    <p style="color: red;"><%= flash[:won] %></p>
-<% end %>
-<% if flash[:lost] %>
-    <p style="color: red;"><%= flash[:lost] %></p>
-<% end %>
+<div class="container">
+    <div class="text-center">
+        <% if flash[:success] %>
+            <%= render '/applications/success' %>
+        <% end %>
+        <% if flash[:won] %>
+            <p style="color: red;"><%= flash[:won] %></p>
+        <% end %>
+        <% if flash[:lost] %>
+            <p style="color: red;"><%= flash[:lost] %></p>
+        <% end %>
+        <div class="color_backdrop">
+            <div class="mx-auto form" style="width-auto;">
+                <h3>Date:</h3> 
+                <%= @match.date %>
+                <br>
+                <h3>Opponent:</h3> 
+                <%= @match.opponent.username %>
+                <br>
+                <h3>Ranking:</h3> 
+                <%= @match.opponent.ranking %>
+                <br>
+                <h3>Notes:</h3> 
+                <%= @match.notes %>
+                <br>
+                <hr>
+            
+            <% @match.games.each_with_index do |g, i| %>
+                <label><%="Game #{i += 1} score:" %></label>
+                <%= "#{g.player_score} : #{g.opponent_score}"%><br>
+                <hr>
+            <% end %>
+            <br>
 
-
-
-<div class="match_stats">
-    <h3>Date:</h3> 
-    <%= @match.date %>
-    <br>
-    <h3>Opponent:</h3> 
-    <%= @match.opponent.username %>
-    <br>
-    <h3>Ranking:</h3> 
-    <%= @match.opponent.ranking %>
-    <br>
-    <h3>Notes:</h3> 
-    <%= @match.notes %>
-    <br>
-    <hr>
+            <%= button_to "Home", player_path(@match.player), method: :get %>
+            </div>
+        </div>
+    </div>
 </div>
- 
-<% @match.games.each_with_index do |g, i| %>
-    <label><%="Game #{i += 1} score:" %></label>
-    <%= "#{g.player_score} : #{g.opponent_score}"%><br>
-    <hr>
-<% end %>
-<br>
-
-<%= button_to "Home", player_path(@match.player), method: :get %>

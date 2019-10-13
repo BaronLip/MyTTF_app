@@ -8,49 +8,49 @@
                 <h1>Create an Opponent</h1>
                 <%= render 'opponent_form' %>
                 <hr>
+
+                <h1>All Opponents</h1>
+                <h3>Pros:</h3>
+                <% if @opponents.pro.exists? %>
+                    <% @opponents.pro.each do |o| %>
+                        <p><%= o.username %> - <%= o.ranking %></p>
+                    <% end %>
+                <% else %>
+                        <p>----------</p>
+                <% end %>
+                <br>
+
+                <h3>Elite:</h3>
+                <% if @opponents.elite.exists? %>
+                    <% @opponents.elite.each do |o| %>
+                        <p><%= o.username %> - <%= o.ranking %></p>
+                    <% end %>
+                <% else %>
+                        <p>----------</p>
+                <% end %>
+                <br>
+
+                <h3>Competitors:</h3>
+                <% if @opponents.competitor.exists? %>
+                    <% @opponents.competitor.each do |o| %>
+                        <p><%= o.username %> - <%= o.ranking %></p>
+                    <% end %>
+                <% else %>
+                        <p>----------</p>
+                <% end %>
+                <br>
+
+                <h3>Amateurs:</h3>
+                <% if @opponents.amateur.exists? %>
+                    <% @opponents.amateur.each do |o| %>
+                        <p><%= o.username %> - <%= o.ranking %></p>
+                    <% end %>
+                <% else %>
+                        <p>----------</p>
+                <% end %>
+                <br>
             </div>
         </div>
     </div>
-
-    <h1>All Opponents</h1>
-    <h3>Pros:</h3>
-    <% if @opponents.pro.exists? %>
-        <% @opponents.pro.each do |o| %>
-            <p><%= o.username %></p>
-        <% end %>
-    <% else %>
-            <p>----------</p>
-    <% end %>
-    <br>
-
-    <h3>Elite:</h3>
-    <% if @opponents.elite.exists? %>
-        <% @opponents.elite.each do |o| %>
-            <p><%= o.username %></p>
-        <% end %>
-    <% else %>
-            <p>----------</p>
-    <% end %>
-    <br>
-
-    <h3>Competitors:</h3>
-    <% if @opponents.competitor.exists? %>
-        <% @opponents.competitor.each do |o| %>
-            <p><%= o.username %></p>
-        <% end %>
-    <% else %>
-            <p>----------</p>
-    <% end %>
-    <br>
-
-    <h3>Amateurs:</h3>
-    <% if @opponents.amateur.exists? %>
-        <% @opponents.amateur.each do |o| %>
-            <p><%= o.username %></p>
-        <% end %>
-    <% else %>
-            <p>----------</p>
-    <% end %>
-    <br>
 </div>
 

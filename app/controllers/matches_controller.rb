@@ -284,47 +284,47 @@ class MatchesController < ApplicationController
                     @opponent.save                
                 elsif
                     @player.ranking > @opponent.ranking
-                    if (@opponent.ranking - @player.ranking).between?(0, 12)
+                    if (@player.ranking - @opponent.ranking).between?(0, 12)
                         @opponent.ranking += 8
                         @player.ranking -= 8
                     elsif
-                        (@opponent.ranking - @opponent.ranking).between?(13, 37)
+                        (@player.ranking - @opponent.ranking).between?(13, 37)
                         @opponent.ranking += 10
                         @player.ranking -= 10
                     elsif
-                        (@opponent.ranking - @opponent.ranking).between?(19, 62)
+                        (@player.ranking - @opponent.ranking).between?(19, 62)
                         @opponent.ranking += 13
                         @player.ranking -= 13
                     elsif
-                        (@opponent.ranking - @opponent.ranking).between?(63, 87)
+                        (@player.ranking - @opponent.ranking).between?(63, 87)
                         @opponent.ranking += 16
                         @player.ranking -= 16
                     elsif
-                        (@opponent.ranking - @opponent.ranking).between?(88, 112)
+                        (@player.ranking - @opponent.ranking).between?(88, 112)
                         @opponent.ranking += 20
                         @player.ranking -= 20
                     elsif
-                        (@opponent.ranking - @opponent.ranking).between?(113, 137)
+                        (@player.ranking - @opponent.ranking).between?(113, 137)
                         @opponent.ranking += 25
                         @player.ranking -= 25
                     elsif
-                        (@opponent.ranking - @opponent.ranking).between?(138, 162)
+                        (@player.ranking - @opponent.ranking).between?(138, 162)
                         @opponent.ranking += 30
                         @player.ranking -= 30
                     elsif
-                        (@opponent.ranking - @opponent.ranking).between?(163, 187)
+                        (@player.ranking - @opponent.ranking).between?(163, 187)
                         @opponent.ranking += 35
                         @player.ranking -= 35
                     elsif
-                        (@opponent.ranking - @opponent.ranking).between?(188, 212)
+                        (@player.ranking - @opponent.ranking).between?(188, 212)
                         @opponent.ranking += 40
                         @player.ranking -= 40
                     elsif
-                        (@opponent.ranking - @opponent.ranking).between?(213, 237)
+                        (@player.ranking - @opponent.ranking).between?(213, 237)
                         @opponent.ranking += 45
                         @player.ranking -= 45
                     elsif
-                        (@opponent.ranking - @opponent.ranking) >= 238
+                        (@player.ranking - @opponent.ranking) >= 238
                         @opponent.ranking += 50
                         @player.ranking -= 50
                     end
@@ -333,6 +333,8 @@ class MatchesController < ApplicationController
                 end
             end
         end
+        @player
+        @opponent
     end
 
 end
