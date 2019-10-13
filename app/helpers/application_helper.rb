@@ -9,7 +9,7 @@ module ApplicationHelper
     end
 
     def is_logged_in?
-        !!session[:player_id] = @player.id
+        !!session[:player_id] == @player.id
     end
 
 end

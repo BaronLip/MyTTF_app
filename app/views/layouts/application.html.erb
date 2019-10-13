@@ -19,17 +19,22 @@
         <header class='container'>
             <nav class='navbar navbar-light bg-light'>
                 <div class='container-fluid'>
-                    <div class='navbar-brand'>
-                        <%= link_to 'MyTTF', root_path, class: "navbar-brand" %>
-                    </div>
-                    
                     <% if session[:player_id] == nil %>
+                        <div class='navbar-brand'>
+                            <%= link_to 'MyTTF', root_path, class: "navbar-brand" %>
+                        </div>
+                        
                         <ul>
                             <li><%= link_to "Github Login", "/auth/github", :method => :get, class: "btn btn-default" %></li>
                             <li><%= link_to "Signup", signup_path, :method => :get, class: "btn btn-default" %></li>
                             <li><%= link_to "Login", new_session_path, :method => :get, class: "btn btn-default" %></li>
                         </ul>
                     <% elsif session[:player_id] %>
+                        <div class='navbar-brand'>
+
+                            <%= link_to 'MyTTF', player_path(session[:player_id]), class: "navbar-brand" %>
+                        </div>
+
                         <ul>
                             <li>
                             <%= link_to "Log Out", logout_path, method: :get, class: "btn btn-default" %></li>

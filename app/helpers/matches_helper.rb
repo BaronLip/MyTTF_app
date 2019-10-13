@@ -10,7 +10,8 @@ module MatchesHelper
     end
 
     def opponent_id_field(match)
-        select_tag "match[opponent_id]", options_from_collection_for_select(Opponent.all, :id, :username), { :class => "form-control"}  
+        select_tag "match[opponent_id]", options_from_collection_for_select(Opponent.all, :id, :username), { :class => "form-control"}
+        # Because this method is call during #new and #update controller actions, How would you add a placeholder or prior opponent selected during update? This is also complicated by the fact this portion of the form calls this helper method.   
     end
 
     
