@@ -50919,3 +50919,2665 @@ Processing by PlayersController#show as HTML
 Completed 200 OK in 118ms (Views: 102.3ms | ActiveRecord: 12.3ms)
 
 
+Started GET "/players/2" for ::1 at 2019-10-13 13:35:25 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.4ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 4135ms (Views: 4127.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/players/2/edit" for ::1 at 2019-10-13 13:35:32 -0500
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_player_form.html.erb (3.9ms)
+  Rendered players/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:35:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/players/2" for ::1 at 2019-10-13 13:35:44 -0500
+Processing by PlayersController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ShQBoyxGaBvvUhbUKdJaqkkzTNvqixXyg7ZH448Nt8ab8xaX/xft7zA9/LGRc/JOd5WatbsHwYYOT5xJTkoyg==", "player"=>{"username"=>"Moe", "gender"=>"male", "email"=>"moe@moe.com", "ranking"=>"1600", "password"=>"[FILTERED]"}, "commit"=>"Update Player", "id"=>"2"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Moe"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Update (0.5ms)[0m  [1m[33mUPDATE "players" SET "username" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["username", "Moe"], ["updated_at", "2019-10-13 18:35:44.117907"], ["id", 2]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:38
+Redirected to http://localhost:3000/players/2
+Completed 200 OK in 20ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:35:44 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.4ms)
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 83ms (Views: 74.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/opponents/new" for ::1 at 2019-10-13 13:35:51 -0500
+Processing by OpponentsController#new as HTML
+  Rendering opponents/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered opponents/_opponent_form.html.erb (3.3ms)
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking >= 2300) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:14
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking >= 1900 AND ranking <= 2299) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:24
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents" WHERE (ranking >= 1900 AND ranking <= 2299)[0m
+  ↳ app/views/opponents/new.html.erb:25
+  [1m[36mOpponent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking >= 1400 AND ranking <= 1899) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:34
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents" WHERE (ranking >= 1400 AND ranking <= 1899)[0m
+  ↳ app/views/opponents/new.html.erb:35
+  [1m[36mOpponent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking <= 1399) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:44
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents" WHERE (ranking <= 1399)[0m
+  ↳ app/views/opponents/new.html.erb:45
+  Rendered opponents/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 66ms (Views: 62.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:35:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/opponents" for ::1 at 2019-10-13 13:39:33 -0500
+Processing by OpponentsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1tmZmYpg0wUV2cHceZ8Mc+VmivAlmluChSRvVmWPW0c5ngXFWS2VEsakfnXvfYrQdZwRqZzcaNNXE4g4zopFUg==", "opponent"=>{"username"=>"Matt", "gender"=>"Male", "ranking"=>"1300"}, "commit"=>"Create Opponent"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/opponents_controller.rb:11
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE "opponents"."username" = $1 LIMIT $2[0m  [["username", "Matt"], ["LIMIT", 1]]
+  ↳ app/controllers/opponents_controller.rb:11
+  [1m[36mOpponent Create (0.5ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "gender", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Matt"], ["ranking", 1300], ["gender", "Male"], ["created_at", "2019-10-13 18:39:33.639780"], ["updated_at", "2019-10-13 18:39:33.639780"]]
+  ↳ app/controllers/opponents_controller.rb:11
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/opponents_controller.rb:11
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/players/2
+Completed 200 OK in 13ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:39:33 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (2.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.6ms)
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 129ms (Views: 107.5ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/players/2/matches/new" for ::1 at 2019-10-13 13:39:39 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"2"}
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:16
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (8.9ms)
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered matches/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 64ms (Views: 58.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:39:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/matches" for ::1 at 2019-10-13 13:40:10 -0500
+Processing by MatchesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5bJvUXS5/m9oFR8pFBNTEH3olaNydPNMomXa32nAKiMK9fMNp/S4eLtooICC8dWz7RIO+ssywB1wUj2xwsU0Ng==", "match"=>{"player_id"=>"2", "opponent_id"=>"5", "date"=>"2019-10-13", "match_type"=>"1", "notes"=>"Matt's a first-timer.", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"6"}, "1"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "2"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "3"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "4"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mMatch Create (2.2ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["player_id", 2], ["opponent_id", 5], ["match_type", "1"], ["created_at", "2019-10-13 18:40:10.609556"], ["updated_at", "2019-10-13 18:40:10.609556"], ["notes", "Matt's a first-timer."], ["date", "2019-10-13"]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mGame Create (0.6ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_id", "opponent_score", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["match_id", 18], ["player_id", 2], ["player_score", 11], ["opponent_id", 5], ["opponent_score", 6], ["created_at", "2019-10-13 18:40:10.613288"], ["updated_at", "2019-10-13 18:40:10.613288"]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:39
+Redirected to http://localhost:3000/matches/18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Moe"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Update (0.3ms)[0m  [1m[33mUPDATE "players" SET "wins" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["wins", 2], ["updated_at", "2019-10-13 18:40:10.618559"], ["id", 2]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[36mOpponent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE "opponents"."username" = $1 AND "opponents"."id" != $2 LIMIT $3[0m  [["username", "Matt"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[36mOpponent Update (0.3ms)[0m  [1m[33mUPDATE "opponents" SET "losses" = $1, "updated_at" = $2 WHERE "opponents"."id" = $3[0m  [["losses", 1], ["updated_at", "2019-10-13 18:40:10.621301"], ["id", 5]]
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/controllers/matches_controller.rb:153
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:242
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Moe"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:242
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:242
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:242
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:243
+  [1m[36mOpponent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE "opponents"."username" = $1 AND "opponents"."id" != $2 LIMIT $3[0m  [["username", "Matt"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:243
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:243
+Completed 200 OK in 28ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/matches/18" for ::1 at 2019-10-13 13:40:10 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mMatch Load (1.4ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:10
+  Rendering matches/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.3ms)
+  [1m[36mOpponent Load (11.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:18
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 18]]
+  ↳ app/views/matches/show.html.erb:28
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:35
+  Rendered matches/show.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 80ms (Views: 62.5ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:40:16 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:40:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/opponents/1/edit" for ::1 at 2019-10-13 13:40:24 -0500
+Processing by OpponentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opponents_controller.rb:21
+  Rendering opponents/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (4.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered opponents/_opponent_form.html.erb (8.9ms)
+  Rendered opponents/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 70ms (Views: 61.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:40:38 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:40:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/opponents/1/edit" for ::1 at 2019-10-13 13:40:39 -0500
+Processing by OpponentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOpponent Load (2.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opponents_controller.rb:21
+  Rendering opponents/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (3.5ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered opponents/_opponent_form.html.erb (8.3ms)
+  Rendered opponents/edit.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 67ms (Views: 59.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:40:41 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:40:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/opponents/5/edit" for ::1 at 2019-10-13 13:40:42 -0500
+Processing by OpponentsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/opponents_controller.rb:21
+  Rendering opponents/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (6.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered opponents/_opponent_form.html.erb (11.6ms)
+  Rendered opponents/edit.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 66ms (Views: 56.1ms | ActiveRecord: 7.2ms)
+
+
+Started PATCH "/opponents/5" for ::1 at 2019-10-13 13:40:56 -0500
+Processing by OpponentsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"96SqjU19ck7/gLicrWaqwXpdRkJOzwlxR+M21BmH/IAQuUM9U0423WwNnoA5PbBXhs99PZ3GOXTZb9jz2NcLRw==", "opponent"=>{"username"=>"Matilda", "gender"=>"Female", "ranking"=>"1500"}, "commit"=>"Update Opponent", "id"=>"5"}
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/opponents_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/opponents_controller.rb:27
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE "opponents"."username" = $1 AND "opponents"."id" != $2 LIMIT $3[0m  [["username", "Matilda"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/opponents_controller.rb:27
+  [1m[36mOpponent Update (0.3ms)[0m  [1m[33mUPDATE "opponents" SET "username" = $1, "ranking" = $2, "gender" = $3, "updated_at" = $4 WHERE "opponents"."id" = $5[0m  [["username", "Matilda"], ["ranking", 1500], ["gender", "Female"], ["updated_at", "2019-10-13 18:40:56.802586"], ["id", 5]]
+  ↳ app/controllers/opponents_controller.rb:27
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/opponents_controller.rb:27
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/players/2
+Completed 200 OK in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:40:56 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 82ms (Views: 65.7ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/matches/18/edit" for ::1 at 2019-10-13 13:41:00 -0500
+Processing by MatchesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:120
+  Rendering matches/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 18]]
+  ↳ app/views/matches/_matches_form.html.erb:42
+  Rendered matches/_matches_form.html.erb (5.6ms)
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered matches/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:41:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/matches/18" for ::1 at 2019-10-13 13:41:18 -0500
+Processing by MatchesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8jn74/wuCjHyZ0EYZJOXgpjX31/X7msk+8kI36QhDEkdfme/L2NMJiEa/rHycREhCC1EBm6oWHUp/u+xDyQSXA==", "match"=>{"player_id"=>"2", "opponent_id"=>"5", "date"=>"2019-10-13", "match_type"=>"1", "notes"=>"Matilda's a first-timer.", "games_attributes"=>{"0"=>{"match_id"=>"18", "player_id"=>"2", "opponent_id"=>"5", "player_score"=>"11", "opponent_score"=>"6", "id"=>"21"}}}, "commit"=>"Update Match", "id"=>"18"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:120
+Unpermitted parameter: :games_attributes
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:62
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:62
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:62
+  [1m[36mMatch Update (0.4ms)[0m  [1m[33mUPDATE "matches" SET "notes" = $1, "updated_at" = $2 WHERE "matches"."id" = $3[0m  [["notes", "Matilda's a first-timer."], ["updated_at", "2019-10-13 18:41:18.043494"], ["id", 18]]
+  ↳ app/controllers/matches_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:62
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 18]]
+  ↳ app/controllers/matches_controller.rb:65
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:70
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:70
+  [1m[36mOpponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:70
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:70
+Redirected to http://localhost:3000/matches/18
+Completed 200 OK in 12ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/matches/18" for ::1 at 2019-10-13 13:41:18 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mMatch Load (1.9ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:10
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:18
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 18]]
+  ↳ app/views/matches/show.html.erb:28
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:35
+  Rendered matches/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 121ms (Views: 116.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:41:21 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 18]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 60ms (Views: 56.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:41:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/matches/18" for ::1 at 2019-10-13 13:41:35 -0500
+Processing by MatchesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ml21B2rS922iAyKnMhUmvu/f6igJQLYp5iadMfen2B7dGilbuZ+xenF+nQ6k96AdfyVxcbAGhXg0EXpfXKLGCw==", "id"=>"18"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:120
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:85
+  [1m[36mMatch Destroy (1.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/matches_controller.rb:85
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:85
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:86
+Redirected to http://localhost:3000/players/2
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:41:35 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:41:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/players/2/matches/new" for ::1 at 2019-10-13 13:42:05 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"2"}
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:16
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (7.9ms)
+  [1m[36mCACHE Player Load (0.1ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered matches/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:42:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/matches" for ::1 at 2019-10-13 13:42:50 -0500
+Processing by MatchesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zi8JewGyma/d/WHkUEICse6swfj31ytzemLyZ+EIbpuJaJUn0v/fuA6A3k3GoIQSflZaoU6RGCKoVRUJSg1wjg==", "match"=>{"player_id"=>"2", "opponent_id"=>"1", "date"=>"2019-10-13", "match_type"=>"1", "notes"=>"I lost so badly to Ryan. Too tired and lack of sleep is detrimental to my gameplay. ", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"2", "opponent_score"=>"11"}, "1"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "2"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "3"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "4"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mMatch Create (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["player_id", 2], ["opponent_id", 1], ["match_type", "1"], ["created_at", "2019-10-13 18:42:50.580317"], ["updated_at", "2019-10-13 18:42:50.580317"], ["notes", "I lost so badly to Ryan. Too tired and lack of sleep is detrimental to my gameplay. "], ["date", "2019-10-13"]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_id", "opponent_score", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["match_id", 19], ["player_id", 2], ["player_score", 2], ["opponent_id", 1], ["opponent_score", 11], ["created_at", "2019-10-13 18:42:50.581595"], ["updated_at", "2019-10-13 18:42:50.581595"]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:39
+Redirected to http://localhost:3000/matches/19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Moe"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Update (0.4ms)[0m  [1m[33mUPDATE "players" SET "losses" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["losses", 1], ["updated_at", "2019-10-13 18:42:50.587571"], ["id", 2]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE "opponents"."username" = $1 AND "opponents"."id" != $2 LIMIT $3[0m  [["username", "Ryan"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[36mOpponent Update (0.3ms)[0m  [1m[33mUPDATE "opponents" SET "wins" = $1, "updated_at" = $2 WHERE "opponents"."id" = $3[0m  [["wins", 7], ["updated_at", "2019-10-13 18:42:50.591121"], ["id", 1]]
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/controllers/matches_controller.rb:153
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."player_id" = $1 ORDER BY "matches"."id" DESC LIMIT $2[0m  [["player_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:245
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/helpers/matches_helper.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:331
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Moe"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:331
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:331
+  [1m[36mPlayer Update (0.3ms)[0m  [1m[33mUPDATE "players" SET "ranking" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["ranking", 1550], ["updated_at", "2019-10-13 18:42:50.598073"], ["id", 2]]
+  ↳ app/controllers/matches_controller.rb:331
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:331
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:332
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE "opponents"."username" = $1 AND "opponents"."id" != $2 LIMIT $3[0m  [["username", "Ryan"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:332
+  [1m[36mOpponent Update (0.4ms)[0m  [1m[33mUPDATE "opponents" SET "ranking" = $1, "updated_at" = $2 WHERE "opponents"."id" = $3[0m  [["ranking", 1319], ["updated_at", "2019-10-13 18:42:50.600978"], ["id", 1]]
+  ↳ app/controllers/matches_controller.rb:332
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:332
+Completed 200 OK in 28ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/matches/19" for ::1 at 2019-10-13 13:42:50 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mMatch Load (3.9ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:10
+  Rendering matches/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.4ms)
+  [1m[36mOpponent Load (13.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:18
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/views/matches/show.html.erb:28
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:35
+  Rendered matches/show.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 85ms (Views: 65.1ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:43:02 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 111ms (Views: 107.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:43:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/logout" for ::1 at 2019-10-13 13:43:18 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3IHrY7brV/tj3ZtZkW+fazuWEv2uVgba8V7OYAFCqPQzxnc/ZaYR7LCgJPAHjRnIq2yJpBcQNYsjaSkOqke24Q=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-13 13:43:18 -0500
+Processing by ApplicationController#welcome as HTML
+  Rendering applications/welcome.html.erb within layouts/application
+  Rendered applications/welcome.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:43:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/github" for ::1 at 2019-10-13 13:43:54 -0500
+Started GET "/auth/github/callback?code=2082f19e78ed3b65be52&state=6fd79aa959398e6e765a97dea70d2edca10a64106cfe1600" for ::1 at 2019-10-13 13:43:54 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"2082f19e78ed3b65be52", "state"=>"6fd79aa959398e6e765a97dea70d2edca10a64106cfe1600", "provider"=>"github"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT $2[0m  [["username", "baronlip"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:10
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-13 13:43:55 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 4]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 7]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 8]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 9]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 10]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 63ms (Views: 58.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:43:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/players/1/edit" for ::1 at 2019-10-13 13:44:23 -0500
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_player_form.html.erb (3.2ms)
+  Rendered players/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:44:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/players/1" for ::1 at 2019-10-13 13:44:29 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (9.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 4]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 7]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 8]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 9]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 10]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 83ms (Views: 68.0ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/logout" for ::1 at 2019-10-13 13:44:33 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mC8r9IiebF38Hza8dTgIycAp2pCQXE1/+E4TwVjQdGB3aLeoW9MqSi9iiRXj2o5qUNNBySkafi4qefSv89VqdQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-13 13:44:33 -0500
+Processing by ApplicationController#welcome as HTML
+  Rendering applications/welcome.html.erb within layouts/application
+  Rendered applications/welcome.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 103ms (Views: 102.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:44:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-10-13 13:44:36 -0500
+Processing by ApplicationController#welcome as HTML
+  Rendering applications/welcome.html.erb within layouts/application
+  Rendered applications/welcome.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2019-10-13 13:44:46 -0500
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"uLnubwqcmgA4FQmxqMSiZt+Sdn01tHIiympbDZf3/4NX/nIz2dHcF+tothg+JiTFT2jtJIzyQXMYXbxjPPLhlg=="}
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:44:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/sessions" for ::1 at 2019-10-13 13:44:56 -0500
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/8QpLjCNd+0XSv+tta+Zyer5gOqd8qeA8Ih79UD8XOgQg7Vy48Ax+sQ3QAQjTR9qegMbsyS0lNEiv5yb6/lC/Q==", "email"=>"moe@moe.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."email" = $1 LIMIT $2[0m  [["email", "moe@moe.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:41
+Redirected to http://localhost:3000/players/2
+Completed 200 OK in 268ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:44:56 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 62ms (Views: 57.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players/2/edit" for ::1 at 2019-10-13 13:45:41 -0500
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_player_form.html.erb (3.3ms)
+  Rendered players/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:45:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/players/2" for ::1 at 2019-10-13 13:45:56 -0500
+Processing by PlayersController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E3lXePZb/LJmKb9pqmHH2VQS6ch5S8NYHyQ+1KFqTUb8PsskJRa6pbVUAMA8g0F6xOhykcAN8AnNE9m6Cm9TUw==", "player"=>{"username"=>"Matilda", "gender"=>"female", "email"=>"moe@moe.com", "ranking"=>"1550", "password"=>"[FILTERED]"}, "commit"=>"Update Player", "id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Matilda"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Update (0.3ms)[0m  [1m[33mUPDATE "players" SET "username" = $1, "password_digest" = $2, "gender" = $3, "updated_at" = $4 WHERE "players"."id" = $5[0m  [["username", "Matilda"], ["password_digest", "$2a$12$OPWCQ4LAudsJmOmg4UmRUuWQluPwYs3m9UczzqkWI0/snNR2/8AhW"], ["gender", "female"], ["updated_at", "2019-10-13 18:45:57.189999"], ["id", 2]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:38
+Redirected to http://localhost:3000/players/2
+Completed 200 OK in 273ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:45:57 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (18.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 131ms (Views: 106.5ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/players/2/edit" for ::1 at 2019-10-13 13:46:08 -0500
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_player_form.html.erb (3.0ms)
+  Rendered players/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:46:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/players/2" for ::1 at 2019-10-13 13:46:13 -0500
+Processing by PlayersController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+DlEklpIbpWZqbnQG7SeIuK3JD43f8IWeVjZLZHyd48XftjOiQUogkrUBnmNVhiBck2/Z4458Uerbz5DOvdpmg==", "player"=>{"username"=>"Moe", "gender"=>"female", "email"=>"moe@moe.com", "ranking"=>"1550", "password"=>"[FILTERED]"}, "commit"=>"Update Player", "id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Moe"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Update (0.4ms)[0m  [1m[33mUPDATE "players" SET "username" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["username", "Moe"], ["updated_at", "2019-10-13 18:46:13.040107"], ["id", 2]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:38
+Redirected to http://localhost:3000/players/2
+Completed 200 OK in 12ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:46:13 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.5ms)
+  [1m[35m (15.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 84ms (Views: 64.0ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/players/2/edit" for ::1 at 2019-10-13 13:46:15 -0500
+Processing by PlayersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/edit.html.erb within layouts/application
+  Rendered players/_player_form.html.erb (3.6ms)
+  Rendered players/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:46:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/players/2" for ::1 at 2019-10-13 13:46:18 -0500
+Processing by PlayersController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YvWXdZdvDPbQ4SBuH1e0EWbW1wI3BzrxrrX6M2zjriuNsgspRCJK4QOcn8eJtTKy9ixMW45BCaB8gh1dx+awPg==", "player"=>{"username"=>"Moe", "gender"=>"male", "email"=>"moe@moe.com", "ranking"=>"1550", "password"=>"[FILTERED]"}, "commit"=>"Update Player", "id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Moe"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[36mPlayer Update (0.3ms)[0m  [1m[33mUPDATE "players" SET "password_digest" = $1, "gender" = $2, "updated_at" = $3 WHERE "players"."id" = $4[0m  [["password_digest", "$2a$12$HSD3seDY2LT71ouTetGebOr4d939XX8VEk/LUOIvSECNO5jwYZAoy"], ["gender", "male"], ["updated_at", "2019-10-13 18:46:18.887120"], ["id", 2]]
+  ↳ app/controllers/players_controller.rb:38
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:38
+Redirected to http://localhost:3000/players/2
+Completed 200 OK in 272ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:46:18 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (16.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.4ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 82ms (Views: 60.3ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/opponents/new" for ::1 at 2019-10-13 13:46:25 -0500
+Processing by OpponentsController#new as HTML
+  Rendering opponents/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered opponents/_opponent_form.html.erb (2.9ms)
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking >= 2300) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:14
+  [1m[36mOpponent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking >= 1900 AND ranking <= 2299) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:24
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents" WHERE (ranking >= 1900 AND ranking <= 2299)[0m
+  ↳ app/views/opponents/new.html.erb:25
+  [1m[36mOpponent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking >= 1400 AND ranking <= 1899) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:34
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents" WHERE (ranking >= 1400 AND ranking <= 1899)[0m
+  ↳ app/views/opponents/new.html.erb:35
+  [1m[36mOpponent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking <= 1399) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:44
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents" WHERE (ranking <= 1399)[0m
+  ↳ app/views/opponents/new.html.erb:45
+  Rendered opponents/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:46:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/opponents" for ::1 at 2019-10-13 13:48:01 -0500
+Processing by OpponentsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lAvrVZFg4mmKlj29WjgYYRzIsTlz/L21SVZsE3bOpBJ7THcJQi2kflnrghTM2p7CjDIqYMq6juSbYYt93cu6Bw==", "opponent"=>{"username"=>"Judy", "gender"=>"Female", "ranking"=>"1900"}, "commit"=>"Create Opponent"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/opponents_controller.rb:11
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE "opponents"."username" = $1 LIMIT $2[0m  [["username", "Judy"], ["LIMIT", 1]]
+  ↳ app/controllers/opponents_controller.rb:11
+  [1m[36mOpponent Create (0.3ms)[0m  [1m[32mINSERT INTO "opponents" ("username", "ranking", "gender", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Judy"], ["ranking", 1900], ["gender", "Female"], ["created_at", "2019-10-13 18:48:01.761254"], ["updated_at", "2019-10-13 18:48:01.761254"]]
+  ↳ app/controllers/opponents_controller.rb:11
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/opponents_controller.rb:11
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/players/2
+Completed 200 OK in 11ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:48:01 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.5ms)
+  [1m[35m (9.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 128ms (Views: 114.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/opponents/new" for ::1 at 2019-10-13 13:48:07 -0500
+Processing by OpponentsController#new as HTML
+  Rendering opponents/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered opponents/_opponent_form.html.erb (2.7ms)
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking >= 2300) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:14
+  [1m[36mOpponent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking >= 1900 AND ranking <= 2299) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:24
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents" WHERE (ranking >= 1900 AND ranking <= 2299)[0m
+  ↳ app/views/opponents/new.html.erb:25
+  [1m[36mOpponent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking >= 1400 AND ranking <= 1899) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:34
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents" WHERE (ranking >= 1400 AND ranking <= 1899)[0m
+  ↳ app/views/opponents/new.html.erb:35
+  [1m[36mOpponent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE (ranking <= 1399) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/opponents/new.html.erb:44
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents" WHERE (ranking <= 1399)[0m
+  ↳ app/views/opponents/new.html.erb:45
+  Rendered opponents/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:48:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/players/2" for ::1 at 2019-10-13 13:48:12 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:48:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/players/2/matches/new" for ::1 at 2019-10-13 13:48:15 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"2"}
+  [1m[36mPlayer Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:16
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (8.0ms)
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered matches/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 63ms (Views: 57.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:48:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/matches" for ::1 at 2019-10-13 13:49:20 -0500
+Processing by MatchesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NQYHnMdKGL2YJhRq0ZAix+WnHDo6UiUx8f5NzSqmZv7aQZvAFAdeqktbq8NHcqRkdV2HY4MUFmAjyaqjgaN46w==", "match"=>{"player_id"=>"2", "opponent_id"=>"6", "date"=>"2019-10-13", "match_type"=>"3", "notes"=>"I lost to JUDY! I'm sexist!", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"5", "opponent_score"=>"11"}, "1"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"6", "opponent_score"=>"11"}, "2"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "3"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "4"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mMatch Create (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["player_id", 2], ["opponent_id", 6], ["match_type", "3"], ["created_at", "2019-10-13 18:49:20.874444"], ["updated_at", "2019-10-13 18:49:20.874444"], ["notes", "I lost to JUDY! I'm sexist!"], ["date", "2019-10-13"]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_id", "opponent_score", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["match_id", 20], ["player_id", 2], ["player_score", 5], ["opponent_id", 6], ["opponent_score", 11], ["created_at", "2019-10-13 18:49:20.875616"], ["updated_at", "2019-10-13 18:49:20.875616"]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_id", "opponent_score", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["match_id", 20], ["player_id", 2], ["player_score", 6], ["opponent_id", 6], ["opponent_score", 11], ["created_at", "2019-10-13 18:49:20.876467"], ["updated_at", "2019-10-13 18:49:20.876467"]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:39
+Redirected to http://localhost:3000/matches/20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Moe"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Update (0.7ms)[0m  [1m[33mUPDATE "players" SET "losses" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["losses", 2], ["updated_at", "2019-10-13 18:49:20.882362"], ["id", 2]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE "opponents"."username" = $1 AND "opponents"."id" != $2 LIMIT $3[0m  [["username", "Judy"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[36mOpponent Update (0.3ms)[0m  [1m[33mUPDATE "opponents" SET "wins" = $1, "updated_at" = $2 WHERE "opponents"."id" = $3[0m  [["wins", 1], ["updated_at", "2019-10-13 18:49:20.886979"], ["id", 6]]
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/controllers/matches_controller.rb:153
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."player_id" = $1 ORDER BY "matches"."id" DESC LIMIT $2[0m  [["player_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:245
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 20]]
+  ↳ app/helpers/matches_helper.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:283
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Moe"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:283
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:283
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:283
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:284
+  [1m[36mOpponent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE "opponents"."username" = $1 AND "opponents"."id" != $2 LIMIT $3[0m  [["username", "Judy"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:284
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:284
+Completed 200 OK in 31ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/matches/20" for ::1 at 2019-10-13 13:49:20 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mMatch Load (2.4ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:10
+  Rendering matches/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.5ms)
+  [1m[36mOpponent Load (21.1ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:18
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 20]]
+  ↳ app/views/matches/show.html.erb:28
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:35
+  Rendered matches/show.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 98ms (Views: 71.0ms | ActiveRecord: 24.7ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:49:32 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 20]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 110ms (Views: 105.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:49:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/matches/20" for ::1 at 2019-10-13 13:49:50 -0500
+Processing by MatchesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aVQifonHLbkXLZ2IEgPRmo2MqqqzkYzU1zPfIkNmZvuGE74iWoprrsRQIiGE4Vc5HXYx8wrXv4UFBDhM6GN47g==", "id"=>"20"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:120
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:85
+  [1m[36mMatch Destroy (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/matches_controller.rb:85
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:85
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:86
+Redirected to http://localhost:3000/players/2
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:49:50 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:49:50 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/players/2/matches/new" for ::1 at 2019-10-13 13:49:52 -0500
+Processing by MatchesController#new as HTML
+  Parameters: {"player_id"=>"2"}
+  [1m[36mPlayer Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:16
+  Rendering matches/new.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  Rendered matches/_matches_form.html.erb (8.3ms)
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered matches/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 62ms (Views: 57.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:49:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/matches" for ::1 at 2019-10-13 13:50:22 -0500
+Processing by MatchesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n17WrkxoOW55ZVvSrPhw1BylRdZvH2KBlv4uCpAwu7hwGUrynyV/eaoY5Hs6GvZ3jF/ej9ZZUdBEyclkOzWlrQ==", "match"=>{"player_id"=>"2", "opponent_id"=>"6", "date"=>"2019-10-13", "match_type"=>"1", "notes"=>"I beat JUDY!!!! I think she let me win.", "games_attributes"=>{"0"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"11", "opponent_score"=>"9"}, "1"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "2"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "3"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "4"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "5"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}, "6"=>{"match_id"=>"", "player_id"=>"2", "opponent_id"=>"", "player_score"=>"", "opponent_score"=>""}}}, "commit"=>"Create Match"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mMatch Create (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("player_id", "opponent_id", "match_type", "created_at", "updated_at", "notes", "date") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["player_id", 2], ["opponent_id", 6], ["match_type", "1"], ["created_at", "2019-10-13 18:50:22.465601"], ["updated_at", "2019-10-13 18:50:22.465601"], ["notes", "I beat JUDY!!!! I think she let me win."], ["date", "2019-10-13"]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("match_id", "player_id", "player_score", "opponent_id", "opponent_score", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["match_id", 21], ["player_id", 2], ["player_score", 11], ["opponent_id", 6], ["opponent_score", 9], ["created_at", "2019-10-13 18:50:22.466792"], ["updated_at", "2019-10-13 18:50:22.466792"]]
+  ↳ app/controllers/matches_controller.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:39
+Redirected to http://localhost:3000/matches/21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Moe"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[36mPlayer Update (0.4ms)[0m  [1m[33mUPDATE "players" SET "wins" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["wins", 3], ["updated_at", "2019-10-13 18:50:22.472112"], ["id", 2]]
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:145
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE "opponents"."username" = $1 AND "opponents"."id" != $2 LIMIT $3[0m  [["username", "Judy"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[36mOpponent Update (0.4ms)[0m  [1m[33mUPDATE "opponents" SET "losses" = $1, "updated_at" = $2 WHERE "opponents"."id" = $3[0m  [["losses", 1], ["updated_at", "2019-10-13 18:50:22.476434"], ["id", 6]]
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:146
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/controllers/matches_controller.rb:153
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:202
+  [1m[36mPlayer Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."username" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["username", "Moe"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:202
+  [1m[36mPlayer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "players" WHERE "players"."email" = $1 AND "players"."id" != $2 LIMIT $3[0m  [["email", "moe@moe.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:202
+  [1m[36mPlayer Update (0.3ms)[0m  [1m[33mUPDATE "players" SET "ranking" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["ranking", 1600], ["updated_at", "2019-10-13 18:50:22.481343"], ["id", 2]]
+  ↳ app/controllers/matches_controller.rb:202
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:202
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/matches_controller.rb:203
+  [1m[36mOpponent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "opponents" WHERE "opponents"."username" = $1 AND "opponents"."id" != $2 LIMIT $3[0m  [["username", "Judy"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:203
+  [1m[36mOpponent Update (0.3ms)[0m  [1m[33mUPDATE "opponents" SET "ranking" = $1, "updated_at" = $2 WHERE "opponents"."id" = $3[0m  [["ranking", 1850], ["updated_at", "2019-10-13 18:50:22.483988"], ["id", 6]]
+  ↳ app/controllers/matches_controller.rb:203
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/matches_controller.rb:203
+Completed 200 OK in 25ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/matches/21" for ::1 at 2019-10-13 13:50:22 -0500
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mMatch Load (8.7ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:10
+  Rendering matches/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.3ms)
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:18
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 21]]
+  ↳ app/views/matches/show.html.erb:28
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:35
+  Rendered matches/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 88ms (Views: 76.5ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 13:50:33 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 5]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 19]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 21]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 2]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:50:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/logout" for ::1 at 2019-10-13 13:51:04 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c8cCZmI+Owtwti6R5ffQIhSJ90/uq9UK2vFEFIR/FP+cgJ46sXN9HKPLkThzFVaBhHNsFlft5lsIxqN6L3oK6g=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-13 13:51:04 -0500
+Processing by ApplicationController#welcome as HTML
+  Rendering applications/welcome.html.erb within layouts/application
+  Rendered applications/welcome.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:51:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/github" for ::1 at 2019-10-13 13:51:10 -0500
+Started GET "/auth/github/callback?code=62a78bae204e79ff8b89&state=18a317d0101b34a0a9f8e86ecbb239b5f1cbd4221d075c14" for ::1 at 2019-10-13 13:51:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"62a78bae204e79ff8b89", "state"=>"18a317d0101b34a0a9f8e86ecbb239b5f1cbd4221d075c14", "provider"=>"github"}
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT $2[0m  [["username", "baronlip"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:10
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-13 13:51:11 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 4]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 7]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 8]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 9]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 10]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.2ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:51:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/matches/10/edit" for ::1 at 2019-10-13 13:52:24 -0500
+Processing by MatchesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:120
+  Rendering matches/edit.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/matches_helper.rb:4
+  [1m[36mOpponent Load (0.3ms)[0m  [1m[34mSELECT "opponents".* FROM "opponents"[0m
+  ↳ app/helpers/matches_helper.rb:13
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 10]]
+  ↳ app/views/matches/_matches_form.html.erb:42
+  Rendered matches/_matches_form.html.erb (5.7ms)
+  [1m[36mCACHE Player Load (0.0ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:5
+  Rendered matches/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 13:52:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/players/1" for ::1 at 2019-10-13 14:52:24 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 4]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 7]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 8]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 9]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 10]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.4ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 105ms (Views: 96.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-13 19:36:10 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 4]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 7]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 8]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 9]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 10]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.4ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 193ms (Views: 185.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/players/2" for ::1 at 2019-10-13 19:46:02 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"2"}
+Filter chain halted as :require_login rendered or redirected
+Completed 403 Forbidden in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 19:46:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/logout" for ::1 at 2019-10-13 19:50:23 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QbJC5H/B9LbaeyJRVVt4slwbqueIj45B/rOdnSIS4duu9d64rIyyoQkGnfjDuf4RzOExvjHJvRAshHrziRf/zg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-13 19:50:23 -0500
+Processing by ApplicationController#welcome as HTML
+  Rendering applications/welcome.html.erb within layouts/application
+  Rendered applications/welcome.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 59ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 19:50:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/auth/github" for ::1 at 2019-10-13 23:57:38 -0500
+Started GET "/auth/github/callback?code=b4a225dacbcabdc8f71d&state=91a1380a3fcafebe7e0062aee2bb57c75243c4254eba8e71" for ::1 at 2019-10-13 23:57:39 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"b4a225dacbcabdc8f71d", "state"=>"91a1380a3fcafebe7e0062aee2bb57c75243c4254eba8e71", "provider"=>"github"}
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."username" = $1 LIMIT $2[0m  [["username", "baronlip"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:10
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/players/1" for ::1 at 2019-10-13 23:57:39 -0500
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:72
+  Rendering players/show.html.erb within layouts/application
+  Rendered applications/_success.html.erb (0.4ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:47
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:57
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 4]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 7]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 8]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 9]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."match_id" = $1[0m  [["match_id", 10]]
+  ↳ app/helpers/matches_helper.rb:85
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/helpers/matches_helper.rb:50
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "games" INNER JOIN "matches" ON "games"."match_id" = "matches"."id" WHERE "matches"."player_id" = $1[0m  [["player_id", 1]]
+  ↳ app/views/players/show.html.erb:18
+  [1m[36mOpponent Load (0.5ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  [1m[36mCACHE Opponent Load (0.0ms)[0m  [1m[34mSELECT  "opponents".* FROM "opponents" WHERE "opponents"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/players/show.html.erb:54
+  Rendered players/show.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 100ms (Views: 92.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/app/assets/fonts/Quicksand-VariableFont:wght.ttf" for ::1 at 2019-10-13 23:57:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/fonts/Quicksand-VariableFont:wght.ttf"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'

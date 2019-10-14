@@ -1,24 +1,64 @@
-# README
+# Rails-portfolio-project_myttf_app
+ 
+### This is a match tracking app intended for table tennis and a continuation of the Sinatra app.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Install:
+1. Run $bundle install.
+2. $ rails db:migrate.
+3. Navigate to "http://localhost:3000/" within browser.
+4. OAuth will not work unless customized by users own key and secret.
 
-Things you may want to cover:
+### Features:
+- Signup/Login
+    * Allows for OAuth sign-in through GitHub
+    * Creates a Player via signup.
+    * Optional login after signing up.
+    * Validations are used for Player creation.
+    * Use of flash messages in case of errors.
+    * Navbar links change based on condition of whether or not player is logged in.
+    * BCrypt is also use for authentication.
 
-* Ruby version
+- Home/Index page
+    * Shows all matches created by User.
+        - Matches are shown in table format.
+        - Win or Lose status is automatically determined by point values.
+        - Ranking is automatically updated when adding a match.
+    * Link to edit Player.
+    * Links to create/edit new Opponent.
+    * Link to created a new Match.
+    * Link to edit existing Match.
+    * Link to delete existing Match.
+    * Link to logout.
 
-* System dependencies
+- New Match page
+    * Allows Player to create new Match.
+        - player_score and opponent_score is limited to 21.
+    * Flash messages used for validations, confirmations and us messages.
+    * Links back to Player#show page.
+    * Additional helper methods were used to determine:
+        - ranking
+        - win and loss count
+        - total number of games
+        - win percentage
+        - whether Player won or lost the match
 
-* Configuration
+- Edit Match page
+    * Allows User to edit existing Match and info.
+    * Links back to Home page.
 
-* Database creation
+- New Opponent page
+    * Allows User to create new Opponent.
+        - redirects back to player home page and opponent is now added to the drop down.
+    * Validations for opponent creation and confirmation.    
+    
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Continued improvement/ Future features:
+1. Add namespaced routes for Player and Admin.
+2. Utilize CSS grid to create more visual impact.
+3. New & Edit Match should have dynamic form based on match_type is chosen.
+4. Be able to upload a profile photo for a Player.
+5. Players and Opponents are the same class...
+6. ...
+7. ...
+8. ...
+9. ...
