@@ -1,12 +1,18 @@
-# Rails-portfolio-project_myttf_app
+# README - Rails-portfolio-project_myttf_app
  
 ### This is a match tracking app intended for table tennis and a continuation of the Sinatra app.
 
-### Install:
-1. Run $bundle install.
+### Dependencies:
+Ruby 2.6.1p33
+
+### Installation:
+Download directory.\
+Within command line/ terminal, navigate to directory:
+1. Within terminal run $bundle install.
 2. $ rails db:migrate.
-3. Navigate to "http://localhost:3000/" within browser.
-4. OAuth will not work unless customized by users own key and secret.
+3. $ rails s.
+4. Within browser, navigate to "http://localhost:3000/" .
+5. OAuth will not work unless customized by users own key and secret.
 
 ### Features:
 - Signup/Login
@@ -58,7 +64,3 @@
 3. New & Edit Match should have dynamic form based on match_type is chosen.
 4. Be able to upload a profile photo for a Player.
 5. Players and Opponents are the same class...
-6. ...
-7. ...
-8. ...
-9. ...

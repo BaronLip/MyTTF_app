@@ -32,6 +32,11 @@ class OpponentsController < ApplicationController
         end
     end
 
+    #
+    # def mnames
+    #     @opponents = Opponent.all
+    # end
+
     private
 
     def opponent_params
